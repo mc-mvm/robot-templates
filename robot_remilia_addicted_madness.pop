@@ -2876,6 +2876,37 @@ WaveSchedule
 			WeaponRestrictions	PrimaryOnly
 			ClassIcon	pyro_dragon_fury_swordstone
 		}
+		T_TFBot_Pyro_Smoke	// Borked :(
+		{
+			Name "Atomic Grenade Pyro"
+		//	Name "Smoke Grenade Pyro"  // Smoke grenades can't hurt people in any way
+			Class Pyro
+			Skill Hard
+			ClassIcon	soldier_smoke_bomb
+			Item	"The Dragon's Fury"
+			Item	"The Mair Mask"
+			MaxVisionRange 800
+			WeaponRestrictions SecondaryOnly
+			Item "The Gas Passer"
+			ItemAttributes
+			{
+				ItemName	"The Dragon's Fury"
+				"damage penalty"	0.1
+				"item_meter_charge_rate" 50
+				"weapon burn dmg reduced"	0.25
+			}
+			ItemAttributes
+			{
+				ItemName "The Gas Passer"
+				"use large smoke explosion" 1
+				"damage penalty"	0.4
+				"mark for death"	1
+				"damage causes airblast" 1
+				"override projectile type"	17
+				"fire rate penalty" 2.5
+				"mult_item_meter_charge_rate" 0.1
+			}
+		}
 		//Demoman
 		T_TFBot_demo_delay_burstfire
 		{
@@ -2893,6 +2924,40 @@ WaveSchedule
 				"clip size penalty" 0.5
 				"fire rate bonus" 0.1
 				"projectile spread angle penalty"	10
+			}
+		}
+		T_TFBot_Demo_Smoke
+		{
+			Name "Smoke Bomb Demoman"
+			Class Demoman
+			Skill Normal
+			ClassIcon	demo_atomic
+			Item	"The Loose Cannon"
+			Item	"The Mair Mask"
+			Item	"The Gunboats"
+			Item	"The Ullapool Caber"
+			MaxVisionRange 800
+			ItemAttributes
+			{
+				ItemName "The Loose Cannon"
+				"use large smoke explosion" 1
+				"damage penalty"	0.4
+			//	"mark for death"	1
+				"apply z velocity on damage" -150		// has really high knockback for some reason, this is to tone it down
+				"apply look velocity on damage" -200	// has really high knockback for some reason, this is to tone it down
+				"projectile speed increased" 1.6
+				"fire rate penalty" 6
+				"fuse bonus" 1.7
+				"faster reload rate" -0.1
+				"grenade launcher mortar mode" -1
+				"no self blast dmg" 2
+				"Blast radius decreased" 0.0001
+			}
+			CharacterAttributes
+			{
+				"hand scale" 1.5
+				"voice pitch scale" 0
+				"gesture speed increase" 0.7
 			}
 		}
 		//Heavy
@@ -2972,6 +3037,25 @@ WaveSchedule
 				}
 			}
 		}
+		T_TFBot_Medic_QuickFix_armored
+		{
+			Class Medic
+			Health 1000
+			Name "Armored Quick-Fix Medic"
+			Item "The Quick-Fix"
+			ClassIcon medic_armored_qf
+			Scale  1.4
+			ItemAttributes
+			{
+				ItemName "The Quick-Fix"
+				"ubercharge rate bonus" 0.01 // pretty much disables ubercharge
+			}
+			CharacterAttributes
+			{
+				"heal rate bonus" 15
+				"health regen"        10
+			}
+		}		
 		T_TFBot_Giant_inf_krit
 		{
 			Class Medic
@@ -4022,17 +4106,11 @@ WaveSchedule
 			Attributes SpawnWithFullCharge
 			Tag bot_squad_member
 			Item "Upgradeable TF_WEAPON_MEDIGUN" // no way to see it
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_MEDIGUN"
 				"ubercharge rate bonus" 2
 				"heal rate bonus" 5
-			}
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
 			}
 		}
 
@@ -4089,13 +4167,7 @@ WaveSchedule
 			Name "Quick-Fix Medic"
 			Skill Easy
 			Item "The Quick-Fix"
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			Tag bot_squad_member
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 		}
 
 		T_TFBot_Medic_SlowRecharge
@@ -4107,18 +4179,12 @@ WaveSchedule
 			Attributes SpawnWithFullCharge
 			Tag bot_squad_member
 			Item "Field Practice"
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			Item "Upgradeable TF_WEAPON_MEDIGUN"
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_MEDIGUN"
 				"ubercharge rate penalty" 0.25
 				"heal rate bonus" 5
-			}
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
 			}
 		}
 
@@ -10367,6 +10433,8 @@ WaveSchedule
 			}
 		}
 		T_TFBot_Boss_Soldier_RocketShotgun_ToD  // Start as terrifying Rocket Shotgunner, then become a Rocket Barrager
+												// ToD is Ticket to Die, should be TTD but I called it ToD???
+												// (ToD still sounds cool) This is used in Trainyard, adv mission
 		{
 			Class Soldier
 			//	Name "Sergeant Rocket Shotgun"
@@ -10406,6 +10474,38 @@ WaveSchedule
 				"rage giving scale"	0.4
 				"airblast vertical vulnerability multiplier" 0.0
 				"override footstep sound set" 3
+			}
+		}
+		T_TFBot_Boss_Pyro_Fireball_Chief
+		{
+			Class Pyro
+			Name "Certified Fireball Master"
+			Health 10000
+			MaxVisionRange 800
+			ClassIcon pyro_dragon_fury_swordstone
+			Skill Expert
+			Item "The Dragon's Fury"
+			Item "Burny's Boney Bonnet"
+		//	Item "The Cauterizer's Caudal Appendage"
+			Attributes MiniBoss
+			Attributes UseBossHealthBar
+			ItemAttributes
+			{
+				ItemName "The Dragon's Fury"
+				"damage bonus" 1.25
+				"weapon burn dmg increased" 3
+				"mult_item_meter_charge_rate" 0.3
+				"critboost on kill" 8
+			}
+			CharacterAttributes
+			{
+				"move speed penalty" 0.4
+				"health regen" 100
+				"damage force reduction" 0.0
+				"airblast vulnerability multiplier" 0.0
+				"override footstep sound set" 2
+				"airblast vertical vulnerability multiplier" 0.0
+				"rage giving scale" 0.4
 			}
 		}
 		T_TFGateBot_Soldier_Extended_Concheror_Hard
