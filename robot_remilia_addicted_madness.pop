@@ -577,7 +577,6 @@ WaveSchedule
 			Skill Normal
 			Attributes SpawnWithFullCharge
 			Item	"Upgradeable TF_WEAPON_MEDIGUN"
-			Item	"Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			Tag bot_squad_member
 			ItemAttributes
 			{
@@ -585,11 +584,6 @@ WaveSchedule
 				"ubercharge rate bonus" 5
 				"uber duration bonus" -3
 				"heal rate penalty" 0.1
-			}
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
 			}
 		}
 		Witch_Uber_Giant
@@ -601,14 +595,8 @@ WaveSchedule
 			Attributes	MiniBoss
 			Health	4500
 			Item "Upgradeable TF_WEAPON_MEDIGUN"
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			Item "Upgradeable TF_WEAPON_BONESAW"
 			Tag bot_squad_member
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_MEDIGUN"
@@ -631,14 +619,8 @@ WaveSchedule
 			ClassIcon	witch
 			Skill Easy
 			Item "The Quick-Fix"
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			Item "Upgradeable TF_WEAPON_BONESAW"
 			Tag bot_squad_member
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 		}
 		Witch_Giant
 		{
@@ -649,14 +631,8 @@ WaveSchedule
 			Attributes	MiniBoss
 			Health	4500
 			Item "The Quick-Fix"
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			Item "Upgradeable TF_WEAPON_BONESAW"
 			Tag bot_squad_member
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 			CharacterAttributes
 			{
 				"heal rate bonus" 50
@@ -1192,7 +1168,7 @@ WaveSchedule
 		T_TFGateBot_Heavy_IronFist_Airblast_Crit
 		{
 			Class Heavyweapons
-			Name "Steel Gauntlet Pusher"
+			Name "Pusher Steel Gauntlet"
 			ClassIcon heavy_steelfist
 			Health 900
 			Scale 1.5
@@ -1265,18 +1241,12 @@ WaveSchedule
 				"ubercharge rate bonus" 25
 				"heal rate penalty" 0.5
 				"uber duration bonus" 100
-				"medigun bullet resist passive" 1
-				"medigun bullet resist deployed" 1
+				"medigun bullet resist passive" 1.3
+				"medigun bullet resist deployed" 1.3
 			}
 			ClassIcon medic_vac_bullet
 			Attributes IgnoreFlag
-			Name "Bullet Resist Medic"
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-			ItemAttributes
-			{
-			    ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
+			Name "Absorber of Bullets"
 		}
 		T_TFBot_Medic_Vac_Boss_F
 		{
@@ -1294,18 +1264,12 @@ WaveSchedule
 				"ubercharge rate bonus" 25
 				"heal rate penalty" 0.5
 				"uber duration bonus" 100
-				"medigun fire resist passive" 1
-				"medigun fire resist deployed" 1
+				"medigun fire resist passive" 1.3
+				"medigun fire resist deployed" 1.3
 			}
 			ClassIcon medic_vac_fire
-			Name "Fire Resist Medic"
+			Name "Absorber of Heat"
 			Attributes IgnoreFlag
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-			ItemAttributes
-			{
-			    ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 		}
 		T_TFBot_scout_soda_cola_giant
 		{
@@ -1784,6 +1748,54 @@ WaveSchedule
 				"override footstep sound set" 2
 			}
 		}
+		T_TFBot_Chief_Corvus  //  Found as leftover in the section we put Valve's Gatebots... have a look yourself
+		{
+			Name	"Corvus the fallen Celestrian"
+			Class	Heavy
+			Skill	Expert
+			Health	60000
+			WeaponRestrictions	PrimaryOnly
+			Item	"The Brutal Bouffant"
+			Item	"The Flight of the Monarch"
+			Item "The Huo Long Heatmaker"
+			Attributes	MiniBoss
+			Attributes	UseBossHealthBar
+			ItemAttributes
+			{
+				ItemName "The Brutal Bouffant"
+				"set item tint rgb" 16774425
+			}
+			ItemAttributes
+			{
+				ItemName "The Flight of the Monarch"
+				"set item tint rgb" 25600
+			}
+			ItemAttributes
+			{
+				ItemName "The Huo Long Heatmaker"
+				"projectile spread angle penalty" 5
+				"fire rate bonus" 0.7
+				"Set DamageType Ignite"	1
+				"dmg bonus while half dead"	4
+				"mod weapon blocks healing" 1 //block healing
+				"health drain" -15 // 40s death clock
+				"dmg from ranged reduced" 0.000000001
+				"dmg penalty while half alive"	2.5
+				"damage bonus vs burning"	4
+				"heal on kill"	405 //+27s timer
+				"cannot be backstabbed" 1
+				"dmg from melee increased" -1
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.4
+				"damage force reduction" 0.0
+				"airblast vulnerability multiplier" 0.00
+				"override footstep sound set" 3
+				"airblast vertical vulnerability multiplier" 0.00
+				"rage giving scale" 0.4
+			}
+		}
 		T_TFBot_Giant_Medic_Boss_downtown2
 		{
 			Class Medic
@@ -1793,16 +1805,10 @@ WaveSchedule
 			Health 12500
 			Attributes SpawnWithFullCharge
 			Item "The Quick-Fix"
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			WeaponRestrictions SecondaryOnly
 			Tag	bot_giant
 			Attributes MiniBoss
 			Attributes	UseBossHealthBar
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 			CharacterAttributes
 			{
 				"move speed bonus"	0.5
@@ -1819,18 +1825,12 @@ WaveSchedule
 			ClassIcon medic_uber_giant
 			Skill Expert
 			Health 12500
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			Item "Upgradeable TF_WEAPON_MEDIGUN"
 			Attributes SpawnWithFullCharge
 			Attributes	UseBossHealthBar
 			WeaponRestrictions SecondaryOnly
 			Tag	bot_giant
 			Attributes MiniBoss
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_MEDIGUN"
@@ -3816,7 +3816,7 @@ WaveSchedule
 				"override footstep sound set" 4
 			}
 		}
-		//Standard
+		// Standard - Edited Valve Bots
 		// Sniper
 		T_TFBot_Sniper
 		{
@@ -3918,10 +3918,10 @@ WaveSchedule
 			WeaponRestrictions MeleeOnly
 			Item "The Holy Mackerel"
 			Name "Fish Scout"
-			ClassIcon scout_bat
+			ClassIcon scout_fish_nys // if you love God use this icon for all of your fish scouts
 		}
 
-		T_TFBot_Scout_SunStick
+ 		T_TFBot_Scout_SunStick
 		{
 			Class Scout
 			Skill Hard
@@ -4124,18 +4124,12 @@ WaveSchedule
 			Tag bot_squad_member
 			Item "The Byte'd Beak"
 			Item "Upgradeable TF_WEAPON_MEDIGUN" // no way to see it
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_MEDIGUN"
 				"ubercharge rate bonus" 5
 				"uber duration bonus" -3
 				"heal rate penalty" 0.1
-			}
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
 			}
 		}
 
@@ -4145,7 +4139,6 @@ WaveSchedule
 			Name "Big-Heal Medic"
 			Skill Normal
 			Item "The Quick-Fix"
-			Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
 			Item "The Combat Medic's Crusher Cap"
 			Tag bot_squad_member
 			ItemAttributes
@@ -4153,11 +4146,6 @@ WaveSchedule
 				ItemName "The Quick-Fix"
 				"ubercharge rate penalty" -0.1
 				"heal rate bonus" 10
-			}
-			ItemAttributes
-			{
-				ItemName "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
 			}
 		}
 
@@ -4256,13 +4244,14 @@ WaveSchedule
 				"medigun fire resist deployed" 0.99
 				"bot medic uber health threshold" 300
 				"medigun charge is resists" 5
-				"lunchbox adds minicrits" 3
+			//	"lunchbox adds minicrits" 3  // default weapon mode allows inf vac uber duration even with or without the duration bonus att
 				"ubercharge overheal rate penalty" 0.67
 				"overheal fill rate reduced" 0.34
 				"kill eater score type" 1
 				"kill eater score type 2" 2
 			}
 		}
+
 		T_TFBot_Medic_Vaccinator_Bullet_Linger
 		{
 			Class Medic
@@ -4371,7 +4360,7 @@ WaveSchedule
 		{
 			Class Heavyweapons
 			Name "Heavyweight Champ"
-			Skill Easy
+			Skill Hard
 			ClassIcon heavy_champ
 			WeaponRestrictions MeleeOnly
 			Item "the killing gloves of boxing"
@@ -4382,7 +4371,7 @@ WaveSchedule
 		{
 			Class Heavyweapons
 			Name "Heavyweight Champ"
-			Skill Easy
+			Skill Hard
 			ClassIcon heavy_gru
 			WeaponRestrictions MeleeOnly
 			Item "Gloves of Running Urgently MvM"
@@ -4393,19 +4382,40 @@ WaveSchedule
 		{
 			Class Heavyweapons
 			Name "Heavy Mittens"
-			Skill Easy
+			Skill Expert
 			ClassIcon heavy_mittens
 			//Scale 0.65
 			WeaponRestrictions MeleeOnly
 			Health 60
 			Attributes AlwaysCrit
-			//Item "The All-Father"
-			//Item "Point and Shoot"
+			Item "The All-Father"
+			Item "Point and Shoot"
+			//Item "The Holiday Punch"
+			ItemAttributes
+			{
+				ItemName "The Holiday Punch"
+				"gesture speed increase" 1.5  // evil
+			}
+		}
+
+		T_TFBot_Heavyweapons_Gnome_NotFake
+		{
+			Class Heavyweapons
+			Name "Heavy Mittens"
+			Skill Expert
+			ClassIcon heavy_mittens
+			Scale 0.65
+			WeaponRestrictions MeleeOnly
+			Health 60
+			Attributes AlwaysCrit
+			Item "The All-Father"
+			Item "Point and Shoot"
 			Item "The Holiday Punch"
 			ItemAttributes
 			{
 				ItemName "The Holiday Punch"
 				"damage penalty" 0.2
+				"gesture speed increase" 1.5
 			}
 			CharacterAttributes
 			{
@@ -4521,8 +4531,8 @@ WaveSchedule
 			WeaponRestrictions MeleeOnly
 			Attributes AirChargeOnly
 			//Attributes AlwaysCrit
-		//	SuppressTimedFetchFlag 1 [$SIGSEGV]
-		//	Action Mobber [$SIGSEGV]
+			SuppressTimedFetchFlag 1 [$SIGSEGV]
+			Action Mobber [$SIGSEGV]
 			Attributes AutoJump
 			AutoJumpMin 10
 			AutoJumpMax 10
@@ -4646,7 +4656,7 @@ WaveSchedule
 				"damage penalty" .2
 				"fire rate bonus" -0.1
 				"clip size bonus" 0
-				"clip size penalty" 0.75
+				"clip size penalty" 0.6
 				"reload time increased" 1.5
 				"Blast radius increased" 1.2
 				"projectile spread angle penalty" 2
@@ -4679,7 +4689,6 @@ WaveSchedule
 		{
 			Class Pyro
 			Skill Easy
-			WeaponRestrictions PrimaryOnly
 			ItemAttributes
 			{
 				ItemName "TF_WEAPON_FLAMETHROWER"
@@ -4770,7 +4779,7 @@ WaveSchedule
 			Skill Expert
 			Health 275
 		}
-		//GateBot - Offical
+		//GateBots - Edited Valve Bots
 		T_TFGateBot_Scout_Melee
 		{
 			Class Scout
@@ -7223,54 +7232,6 @@ WaveSchedule
 				}
 			}
 		}
-		T_TFBot_Chief_Corvus
-		{
-			Name	"Corvus the fallen Celestrian"
-			Class	Heavy
-			Skill	Expert
-			Health	60000
-			WeaponRestrictions	PrimaryOnly
-			Item	"The Brutal Bouffant"
-			Item	"The Flight of the Monarch"
-			Item "The Huo Long Heatmaker"
-			Attributes	MiniBoss
-			Attributes	UseBossHealthBar
-			ItemAttributes
-			{
-				ItemName "The Brutal Bouffant"
-				"set item tint rgb" 16774425
-			}
-			ItemAttributes
-			{
-				ItemName "The Flight of the Monarch"
-				"set item tint rgb" 25600
-			}
-			ItemAttributes
-			{
-				ItemName "The Huo Long Heatmaker"
-				"projectile spread angle penalty" 5
-				"fire rate bonus" 0.7
-				"Set DamageType Ignite"	1
-				"dmg bonus while half dead"	4
-				"mod weapon blocks healing" 1 //block healing
-				"health drain" -15 // 40s death clock
-				"dmg from ranged reduced" 0.000000001
-				"dmg penalty while half alive"	2.5
-				"damage bonus vs burning"	4
-				"heal on kill"	405 //+27s timer
-				"cannot be backstabbed" 1
-				"dmg from melee increased" -1
-			}
-			CharacterAttributes
-			{
-				"move speed bonus"	0.4
-				"damage force reduction" 0.0
-				"airblast vulnerability multiplier" 0.00
-				"override footstep sound set" 3
-				"airblast vertical vulnerability multiplier" 0.00
-				"rage giving scale" 0.4
-			}
-		}
 		T_TFGateBot_Giant_Soldier_RocketPush
 		{
 			Class Soldier
@@ -8400,7 +8361,7 @@ WaveSchedule
 			}
 		}
 
-		T_TFBot_Giant_Demoman
+		T_TFBot_Giant_Demoman  // this is actually a rapid fire? get your sh- nah, I don't misuse words
 		{
 			Class Demoman
 			Name "Giant Rapid Fire Demoman"
@@ -8430,7 +8391,7 @@ WaveSchedule
 			}
 		}
 
-		T_TFBot_Giant_Demo_RapidFire
+		T_TFBot_Giant_Demo_RapidFire  // this is actually a regular giant? get your sh- nah, I don't misuse words
 		{
 			Class Demoman
 			Name "Giant Demoman"
@@ -8774,7 +8735,7 @@ WaveSchedule
 			Tag bot_giant
 			CharacterAttributes
 			{
-				"move speed bonus"	1.3
+				"move speed bonus"	1.3  // 2 // actual speed is only 1.3 in-game due to speed limit
 				"damage force reduction" 0.7
 				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
@@ -8782,17 +8743,16 @@ WaveSchedule
 			}
 		}
 
-		T_TFBot_Giant_Scout_FAN // high movement speed, melee only
+		T_TFBot_Giant_Scout_FAN // knockbacks any lone chasers away, but slower than actual Super Scout
 		{
 			Class Scout
 			Name "Force-a-Nature Super Scout"
 			ClassIcon scout_fan_giant
-			// Item "The Fed-Fightin' Fedora"
 			Item "The Bolt Boy"
+			Item "The Fed-Fightin' Fedora"
 			Item "The Force-a-Nature"
 			Health 1200
 			Attributes MiniBoss
-			Attributes HoldFireUntilFullReload
 			Skill Expert
 			MaxVisionRange 1200
 			Tag bot_giant
@@ -8811,7 +8771,7 @@ WaveSchedule
 			}
 			CharacterAttributes
 			{
-				"move speed bonus"	1.1
+				"move speed bonus"	1.1  // removing this is debatable for my inner self
 				"damage force reduction" 0.7
 				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
@@ -8825,7 +8785,7 @@ WaveSchedule
 			Skill Expert
 			Health 1600
 			ClassIcon scout_jumping_g
-			Name "Giant Jumping Sandman Scout"
+			Name "Giant Jumpy Sandman Scout"
 			WeaponRestrictions MeleeOnly
 			Item "The Sandman"
 			Item "The Hanger-On Hood"
@@ -8856,7 +8816,7 @@ WaveSchedule
 			}
 		}
 
-		T_TFBot_Giant_DemoMan_PrinceTavish // Fast Moving DemoKnight **
+		T_TFBot_Giant_DemoMan_PrinceTavish // Fast Moving DemoKnight, or supposed to
 		{
 			Class Demoman
 			ClassIcon demoknight_giant
@@ -8876,10 +8836,10 @@ WaveSchedule
 				"critboost on kill" 3
 			}
 			ItemAttributes
-            {
-                ItemName "Ali Baba's Wee Booties"
-                "max health additive bonus" 0
-            }
+			{
+				ItemName "Ali Baba's Wee Booties"
+				"max health additive bonus" 0
+			}
 			CharacterAttributes
 			{
 				"move speed penalty" 0.5
@@ -10107,11 +10067,6 @@ WaveSchedule
 				ItemName "The Quick-Fix"
 				"generate rage on heal" 2
 			}
-			ItemAttributes
-			{
-				ItemName TF_WEAPON_SYRINGEGUN_MEDIC
-				"damage penalty" 0.1
-			}
 			CharacterAttributes
 			{
 				"increase buff duration" 2
@@ -10137,16 +10092,35 @@ WaveSchedule
 				"ubercharge rate penalty" -41
 				"generate rage on heal" 2
 			}
-			ItemAttributes
-			{
-				ItemName TF_WEAPON_SYRINGEGUN_MEDIC
-				"damage penalty" 0.1
-			}
 			CharacterAttributes
 			{
 				"increase buff duration" 2
 			}
 		}
+
+		T_TFBot_Medic_QuickFix_FullCharge
+		{
+			Class Medic
+			Item "The Quick-Fix"
+			Tag bot_squad_member
+			Attributes SpawnWithFullCharge
+			Skill Hard
+			Name "Mega-heal Medic"
+			Scale 1.3
+			Health 800
+			ItemAttributes
+			{
+				ItemName "The Quick-Fix"
+				"heal rate bonus" 5
+				"ubercharge rate bonus" 3
+			}
+			CharacterAttributes
+			{
+				"bot medic uber health threshold" 100
+				"bot medic uber deploy delay duration" 0.8
+			}
+		}
+
 		T_TFBot_Medic_Vaccinator_Bullet_Resist  // Nothing note worthy for REDs to read;No Upgradeable weapons
 		{
 			Class Medic
@@ -10315,8 +10289,6 @@ WaveSchedule
 			ClassIcon sniper_bow_ignite
 			WeaponRestrictions PrimaryOnly
 			Item "The Huntsman"
-			Item "Starduster"
-			Item "Upgradeable TF_WEAPON_CLUB"
 
 			ItemAttributes
 			{
@@ -10350,6 +10322,7 @@ WaveSchedule
 			Name "Rapid Fire Bowman"
 			Skill Expert
 			ClassIcon sniper_bow_multi
+			Attributes AlwaysCrit
 			Item "The Huntsman"
 			Item "Starduster"
 
@@ -10378,7 +10351,7 @@ WaveSchedule
 				ItemName "The detonator"
 				"fire rate bonus" 0.1
 				"mod no reload DISPLAY ONLY" 1
-				"no self blast dmg" 1 // 2
+				"no self blast dmg" 2 // does this do anything on Detonators?
 			}
 			CharacterAttributes
 			{
@@ -10390,10 +10363,9 @@ WaveSchedule
 			}
 		}
 		T_TFBot_Boss_Soldier_RocketShotgun  // Start as terrifying Rocket Shotgunner, then become a Rocket Barrager
-											// Things here may change at the future date. Date of writing this is 11 October 2019
 		{
 			Class Soldier
-			//	Name "Sergeant Rocket Shotgun"
+			//  Name "Sergeant Rocket Shotgun"
 			Name "Sergeant Rocket Storm"
 			ClassIcon soldier_blackbox
 			Health 50000
@@ -10433,11 +10405,11 @@ WaveSchedule
 			}
 		}
 		T_TFBot_Boss_Soldier_RocketShotgun_ToD  // Start as terrifying Rocket Shotgunner, then become a Rocket Barrager
-												// ToD is Ticket to Die, should be TTD but I called it ToD???
-												// (ToD still sounds cool) This is used in Trainyard, adv mission
+												// ToD is Ticket to Die, should be TTD but we called it ToD???
+												// (ToD still sounds cool, mentioning it is just for fun) This is used in our Trainyard adv mission ^^
 		{
 			Class Soldier
-			//	Name "Sergeant Rocket Shotgun"
+			//  Name "Sergeant Rocket Shotgun"
 			Name "Sergeant Rocket Storm"
 			ClassIcon soldier_rocketshotgun_v2
 			Health 14000
@@ -10856,7 +10828,7 @@ WaveSchedule
 			{
 				Default
 				{
-				    Skill Expert
+					Skill Expert
 					Tag bot_gatebot
 					Tag bot_giant
 					Tag nav_prefer_gate1_flank
@@ -10880,7 +10852,7 @@ WaveSchedule
 					}
 				}
 				RevertGateBotsBehavior
-                {
+				{
 					Skill Expert
 					Tag bot_giant
 					Tag nav_prefer_gate1_flank
@@ -10893,13 +10865,13 @@ WaveSchedule
 						"bullets per shot bonus" 1.2
 						"damage bonus" 1.25
 					}
-                    ItemAttributes
-                    {
+					ItemAttributes
+					{
 						ItemName "MvM Gatebot Light Scout"
 						"item style override" 1
-                    }
-                    CharacterAttributes
-                    {
+					}
+					CharacterAttributes
+					{
 						"damage force reduction" 0.7
 						"airblast vulnerability multiplier" 0.3
 						"airblast vertical vulnerability multiplier" 0.5
