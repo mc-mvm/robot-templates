@@ -552,6 +552,7 @@ WaveSchedule
 			Item	"The Kritzkrieg"
 			Attributes	AlwaysCrit
 			Attributes SpawnWithFullCharge
+			WeaponRestrictions SecondaryOnly
 			ItemAttributes
 			{
 				ItemName	"The Kritzkrieg"
@@ -1026,12 +1027,7 @@ WaveSchedule
 				}
 				RevertGateBotsBehavior
 				{
-					Item "MvM GateBot Light Scout"
-					ItemAttributes               // turn off light hat
-					{
-						ItemName "MvM GateBot Light Scout"
-						"item style override" 1
-					}
+					Item "Bonk Helm"
 					ItemAttributes
 					{
 						ItemName "Bonk! Atomic Punch"
@@ -1565,6 +1561,11 @@ WaveSchedule
 					Item "MvM GateBot Light Pyro"
 					Skill Easy
 					Attributes	AlwaysFireWeapon
+					ItemAttributes
+					{
+						ItemName TF_WEAPON_FLAMETHROWER
+						"airblast_pushback_no_viewpunch" 1
+					}
 				}
 				RevertGateBotsBehavior
 				{
@@ -1576,6 +1577,11 @@ WaveSchedule
 					}
 					Skill Easy
 					Attributes	AlwaysFireWeapon
+					ItemAttributes
+					{
+						ItemName TF_WEAPON_FLAMETHROWER
+						"airblast_pushback_no_viewpunch" 1
+					}
 				}
 			}
 		}
@@ -1594,6 +1600,11 @@ WaveSchedule
 
 					Item "MvM GateBot Light Pyro"
 					Skill Easy
+					ItemAttributes
+					{
+						ItemName TF_WEAPON_FLAMETHROWER
+						"airblast_pushback_no_viewpunch" 1
+					}
 				}
 				RevertGateBotsBehavior
 				{
@@ -1604,6 +1615,11 @@ WaveSchedule
 						"item style override" 1
 					}
 					Skill Easy
+					ItemAttributes
+					{
+						ItemName TF_WEAPON_FLAMETHROWER
+						"airblast_pushback_no_viewpunch" 1
+					}
 				}
 			}
 		}
@@ -1627,7 +1643,7 @@ WaveSchedule
 					ItemAttributes
 					{
 						ItemName	TF_WEAPON_FLAMETHROWER
-						"damage penalty" 0.4
+						"airblast_pushback_no_viewpunch" 1
 					}
 						
 				}
@@ -1645,7 +1661,7 @@ WaveSchedule
 					ItemAttributes
 					{
 						ItemName	TF_WEAPON_FLAMETHROWER
-						"damage penalty" 0.4
+						"airblast_pushback_no_viewpunch" 1
 					}
 				}
 			}
@@ -1659,6 +1675,7 @@ WaveSchedule
 			Skill	Easy
 			Item	"The Kritzkrieg"
 			Item	"Titanium Tyrolean"
+			WeaponRestrictions SecondaryOnly
 			Attributes AlwaysCrit
 			Attributes SpawnWithFullCharge
 			ItemAttributes
@@ -1687,6 +1704,7 @@ WaveSchedule
 			Skill	Easy
 			Item	"The Kritzkrieg"
 			Attributes SpawnWithFullCharge
+			WeaponRestrictions SecondaryOnly
 			ItemAttributes
 			{
 				ItemName	"The Kritzkrieg"
@@ -1785,6 +1803,8 @@ WaveSchedule
 				"heal on kill"	405 //+27s timer
 				"cannot be backstabbed" 1
 				"dmg from melee increased" -1
+				"killstreak tier" 2
+				"killstreak idleeffect" 3
 			}
 			CharacterAttributes
 			{
@@ -1993,6 +2013,8 @@ WaveSchedule
 						"mod no reload DISPLAY ONLY" 1
 						"fire rate bonus" 0.5
 						"Projectile speed decreased" 0.65
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					ItemAttributes
 					{
@@ -2033,6 +2055,8 @@ WaveSchedule
 						"mod no reload DISPLAY ONLY" 1
 						"fire rate bonus" 0.5
 						"Projectile speed decreased" 0.65
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					ItemAttributes
 					{
@@ -2163,6 +2187,8 @@ WaveSchedule
 						ItemName "Deflector"
 						"damage bonus"	2.25 // copied from base mighty heavy
 						"attack projectiles" 1	// force ability to shoot down projectiles
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -2186,8 +2212,10 @@ WaveSchedule
 					ItemAttributes
 					{
 						ItemName "Deflector"
-						"damage bonus"	1.5 // copied from base mighty heavy
+						"damage bonus"	2.25 // copied from base mighty heavy
 						"attack projectiles" 1	// force ability to shoot down projectiles
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					ItemAttributes
 					{
@@ -2227,9 +2255,11 @@ WaveSchedule
 					MaxVisionRange 1200
 					Attributes MiniBoss
 					Tag bot_giant
+					Item "Upgradeable TF_WEAPON_MINIGUN"
+					Item "MvM GateBot Light Heavy"
 					ItemAttributes
 					{
-						ItemName "TF_WEAPON_MINIGUN"
+						ItemName "Upgradeable TF_WEAPON_MINIGUN"
 						"damage bonus"	1.5 // copied from base mighty heavy
 					}
 					CharacterAttributes
@@ -2249,9 +2279,16 @@ WaveSchedule
 					MaxVisionRange 1200
 					Attributes MiniBoss
 					Tag bot_giant
+					Item "Upgradeable TF_WEAPON_MINIGUN"
+					Item "MvM GateBot Light Heavy"
+					ItemAttributes               // turn off light hat
+					{
+						ItemName "MvM GateBot Light Heavy"
+						"item style override" 1
+					}
 					ItemAttributes
 					{
-						ItemName "TF_WEAPON_MINIGUN"
+						ItemName "Upgradeable TF_WEAPON_MINIGUN"
 						"damage bonus"	1.5 // copied from base mighty heavy
 					}
 					CharacterAttributes
@@ -2288,9 +2325,11 @@ WaveSchedule
 					MaxVisionRange 1200
 					Attributes MiniBoss
 					Tag bot_giant
+					Item "MvM GateBot Light Heavy"
+					Item "Upgradeable TF_WEAPON_MINIGUN"
 					ItemAttributes
 					{
-						ItemName "TF_WEAPON_MINIGUN"
+						ItemName "Upgradeable TF_WEAPON_MINIGUN"
 						"damage bonus"	1.5 // copied from base mighty heavy
 					}
 					CharacterAttributes
@@ -2311,9 +2350,16 @@ WaveSchedule
 					Attributes MiniBoss
 					Attributes	AlwaysCrit
 					Tag bot_giant
+					Item "Upgradeable TF_WEAPON_MINIGUN"
+					Item "MvM GateBot Light Heavy"
+					ItemAttributes               // turn off light hat
+					{
+						ItemName "MvM GateBot Light Heavy"
+						"item style override" 1
+					}
 					ItemAttributes
 					{
-						ItemName "TF_WEAPON_MINIGUN"
+						ItemName "Upgradeable TF_WEAPON_MINIGUN"
 						"damage bonus"	1.5 // copied from base mighty heavy
 					}
 					CharacterAttributes
@@ -2362,6 +2408,8 @@ WaveSchedule
 						ItemName "Deflector"
 						"damage bonus"	1.5 // copied from base mighty heavy
 						"attack projectiles" 1	// force ability to shoot down projectiles
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -2387,6 +2435,8 @@ WaveSchedule
 						ItemName "Deflector"
 						"damage bonus"	1.5 // copied from base mighty heavy
 						"attack projectiles" 1	// force ability to shoot down projectiles
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					ItemAttributes
 					{
@@ -2738,6 +2788,8 @@ WaveSchedule
 				"weapon burn dmg reduced"	0.75
 				//"fire rate bonus"	0.8
 				"mult_item_meter_charge_rate" 2
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -2791,13 +2843,16 @@ WaveSchedule
 			Class	Soldier
 			Name	"Alien Tech Soldier"
 			Skill Hard
-			Item        "the cow mangler 5000"
+			Item	"the cow mangler 5000"
+			Item	"Lord Cockswain's Novelty Mutton Chops and Pipe"
+			Item	"Lord Cockswain's Pith Helmet"
 			ClassIcon        soldier_mangler
 			ItemAttributes
             {
                 ItemName        "the cow mangler 5000"
 				"Set DamageType Ignite"        1
 				"damage penalty"	0.7
+				"attach particle effect" 2
 			}
 		}
 		T_TFGateBot_Soldier_Mangler_Fire_Hard
@@ -2816,13 +2871,20 @@ WaveSchedule
 					Tag bot_gatebot 				// having these will cause bots to run towards gates
 
 					Item "The Cow Mangler 5000"
-					Item "MvM GateBot Light Soldier"
+					Item "MvM Gatebot Light Soldier"
+					Item "Lord Cockswain's Novelty Mutton Chops and Pipe"
 					Skill Hard
+					ItemAttributes
+					{
+						ItemName "Lord Cockswain's Pith Helmet"
+						"set item tint rgb" 15185211
+					}
 					ItemAttributes
 					{
 						ItemName "The Cow Mangler 5000"
 						"Set DamageType Ignite" 1
 						"damage penalty" 0.7
+						"attach particle effect" 2
 					}
 				}
 				RevertGateBotsBehavior
@@ -2833,13 +2895,10 @@ WaveSchedule
 						ItemName "The Cow Mangler 5000"
 						"Set DamageType Ignite" 1
 						"damage penalty" 0.7
+						"attach particle effect" 2
 					}
-					Item "MvM GateBot Light Soldier"
-					ItemAttributes               // turn off light hat
-					{
-						ItemName "MvM GateBot Light Soldier"
-						"item style override" 1
-					}
+					Item "Lord Cockswain's Pith Helmet"
+					Item "Lord Cockswain's Novelty Mutton Chops and Pipe"
 					Skill Hard
 				}
 			}
@@ -2945,18 +3004,18 @@ WaveSchedule
 			//	"mark for death"	1
 				"apply z velocity on damage" -150		// has really high knockback for some reason, this is to tone it down
 				"apply look velocity on damage" -200	// has really high knockback for some reason, this is to tone it down
-				"projectile speed increased" 1.6
+				"projectile speed increased" 1.6		// I suspect this's the cause
 				"fire rate penalty" 6
 				"fuse bonus" 1.7
 				"faster reload rate" -0.1
 				"grenade launcher mortar mode" -1
 				"no self blast dmg" 2
-				"Blast radius decreased" 0.0001
+				"Blast radius decreased" -0.0001
 			}
 			CharacterAttributes
 			{
 				"hand scale" 1.5
-				"voice pitch scale" 0
+				"voice pitch scale" 0		// demo the type of nigga to not know how to use gas masks properly
 				"gesture speed increase" 0.7
 			}
 		}
@@ -3065,6 +3124,7 @@ WaveSchedule
 			Skill	Easy
 			Item	"The Kritzkrieg"
 			Item	"Titanium Tyrolean"
+			WeaponRestrictions SecondaryOnly
 			Attributes SpawnWithFullCharge
 			Attributes AlwaysCrit
 			Tag	bot_giant
@@ -3075,6 +3135,8 @@ WaveSchedule
 				"ubercharge rate bonus" 3
 				"bot medic uber health threshold" 10000
 				"uber duration bonus" -200
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -3308,6 +3370,8 @@ WaveSchedule
 				"reload time increased" 2.5
 				"gesture speed increase" 0.15
 				"fire rate bonus" 0.5
+				"killstreak tier" 2
+				"killstreak idleeffect" 6
 			}
 			CharacterAttributes
 			{
@@ -3337,6 +3401,8 @@ WaveSchedule
 				"reload time increased" 2.5
 				"gesture speed increase" 0.15
 				"fire rate bonus" 0.5
+				"killstreak tier" 2
+				"killstreak idleeffect" 6
 			}
 			CharacterAttributes
 			{
@@ -3374,6 +3440,8 @@ WaveSchedule
 						"reload time increased" 2.5
 						"gesture speed increase" 0.15
 						"fire rate bonus" 0.5
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
@@ -3404,6 +3472,8 @@ WaveSchedule
 						"reload time increased" 2.5
 						"gesture speed increase" 0.15
 						"fire rate bonus" 0.5
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
@@ -3439,6 +3509,8 @@ WaveSchedule
 				"fire rate bonus" 0.2
 				"projectile spread angle penalty" 5
 				"Projectile speed decreased" 0.35
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -3466,6 +3538,12 @@ WaveSchedule
 			WeaponRestrictions	PrimaryOnly
 			Attributes	MiniBoss
 			Tag	bot_giant
+			ItemAttributes
+			{
+				ItemName "The Dragon's Fury"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			CharacterAttributes
 			{
 				"move speed bonus"	0.5
@@ -4558,9 +4636,9 @@ WaveSchedule
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
-				"reload time increased" 1.75
+				"reload time increased" 1.211
 				"fire rate bonus" 0.05
-				"clip size penalty" 0.5
+				"damage penalty" 0.5
 				"projectile spread angle penalty" 3
 				//"Projectile speed increased"	1.1
 			}
@@ -5619,6 +5697,10 @@ WaveSchedule
 					{
 						ItemName TF_WEAPON_FLAMETHROWER
 						"airblast_pushback_no_viewpunch" 1
+					}ItemAttributes
+					{
+						ItemName TF_WEAPON_FLAMETHROWER
+						"airblast_pushback_no_viewpunch" 1
 					}
 				}
 			}
@@ -6618,6 +6700,8 @@ WaveSchedule
 						ItemName "Deflector"
 						"damage bonus"	1.5 // copied from base mighty heavy
 						"attack projectiles" 1	// force ability to shoot down projectiles
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -6642,6 +6726,8 @@ WaveSchedule
 						ItemName "Deflector"
 						"damage bonus"	1.5 // copied from base mighty heavy
 						"attack projectiles" 1	// force ability to shoot down projectiles
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					ItemAttributes
 					{
@@ -6685,6 +6771,8 @@ WaveSchedule
 						ItemName "The Huo Long Heatmaker"
 						"ring of fire while aiming"	18
 						"damage bonus"	1.3
+						"killstreak tier" 2
+						"killstreak idleeffect" 3
 					}
 					CharacterAttributes
 					{
@@ -6715,6 +6803,8 @@ WaveSchedule
 						ItemName "The Huo Long Heatmaker"
 						"ring of fire while aiming"	18
 						"damage bonus"	1.3
+						"killstreak tier" 2
+						"killstreak idleeffect" 3
 					}
 					CharacterAttributes
 					{
@@ -6962,6 +7052,8 @@ WaveSchedule
 						"damage bonus"	1.2
 						"attack projectiles" 2
 						"heal on kill" 5000
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -6993,6 +7085,8 @@ WaveSchedule
 						"damage bonus"	1.2
 						"attack projectiles" 2
 						"heal on kill" 5000
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -7043,6 +7137,8 @@ WaveSchedule
 						"damage bonus"	1.2
 						"attack projectiles" 2
 						"heal on kill" 8000
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -7075,6 +7171,8 @@ WaveSchedule
 						"damage bonus"	1.2
 						"attack projectiles" 2
 						"heal on kill" 8000
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -8296,6 +8394,8 @@ WaveSchedule
 				ItemName "Upgradeable TF_WEAPON_SCATTERGUN"
 				"bullets per shot bonus" 1.2
 				"damage bonus" 1.25
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -8317,6 +8417,16 @@ WaveSchedule
 			Attributes HoldFireUntilFullReload
 			Attributes MiniBoss
 			Tag bot_giant
+			Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			//	"blast radius increased" 1.2
+			//	"projectile speed increased" 1.5
+				"damage bonus" 1.2					// this is the superior one :o
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			CharacterAttributes
 			{
 				"move speed penalty"	0.5
@@ -8349,6 +8459,8 @@ WaveSchedule
 				"flame size bonus" 1.75
 				"deflection size multiplier" 1.75
 				"airblast_pushback_no_viewpunch" 1
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -8380,6 +8492,8 @@ WaveSchedule
 				"fire rate bonus" 0.75
 				"reload time increased hidden" -0.1
 				"mod no reload DISPLAY ONLY" 1
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
@@ -8407,6 +8521,8 @@ WaveSchedule
 			{
 				ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
 				"fire rate bonus" 0.5
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 
 			CharacterAttributes
@@ -8435,6 +8551,8 @@ WaveSchedule
 			{
 				ItemName "Upgradeable TF_WEAPON_MINIGUN"
 				"damage bonus"	1.5
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -8460,8 +8578,16 @@ WaveSchedule
 			Tag bot_squad_member
 			ItemAttributes
 			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
 				ItemName "The Quick-Fix"
 				"heal rate bonus" 200
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -8492,6 +8618,8 @@ WaveSchedule
 				ItemName "Deflector"
 				"damage bonus"	1.5 // copied from base mighty heavy
 				"attack projectiles" 1	// force ability to shoot down projectiles
+				"killstreak tier" 2
+				"killstreak idleeffect" 5
 			}
 			CharacterAttributes
 			{
@@ -8523,6 +8651,8 @@ WaveSchedule
 				"bullets per shot bonus" 10
 				"damage penalty" 0.5
 				"faster reload rate" 0.1
+				"killstreak tier" 2
+				"killstreak idleeffect" 7
 			}
 			ItemAttributes
 			{
@@ -8531,6 +8661,8 @@ WaveSchedule
 				"bullets per shot bonus" 10
 				"damage penalty" 0.5
 				"faster reload rate" 0.1
+				"killstreak tier" 2
+				"killstreak idleeffect" 7
 			}
 			CharacterAttributes
 			{
@@ -8561,6 +8693,8 @@ WaveSchedule
 				ItemName "The Brass Beast"
 				"damage bonus"	1.7
 				"minigun spinup time increased" 2.5
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
@@ -8588,6 +8722,8 @@ WaveSchedule
 			{
 				ItemName "Natascha"
 				"damage bonus"	1.5
+				"killstreak tier" 2
+				"killstreak idleeffect" 3
 			}
 			CharacterAttributes
 			{
@@ -8621,6 +8757,8 @@ WaveSchedule
 				// "weapon spread bonus" 1
 				// "fire rate penalty" 4
 				"heal on kill" 5000
+				"killstreak tier" 2
+				"killstreak idleeffect" 5
 			}
 			CharacterAttributes
 			{
@@ -8655,6 +8793,8 @@ WaveSchedule
 				// "weapon spread bonus" 1
 				// "fire rate penalty" 4
 				"heal on kill" 8000
+				"killstreak tier" 2
+				"killstreak idleeffect" 5
 			}
 			CharacterAttributes
 			{
@@ -8683,6 +8823,8 @@ WaveSchedule
 				ItemName "The Huo Long Heatmaker"
 				"ring of fire while aiming"	18
 				"damage bonus"	1.3
+				"killstreak tier" 2
+				"killstreak idleeffect" 3
 			}
 			CharacterAttributes
 			{
@@ -8710,6 +8852,8 @@ WaveSchedule
 				ItemName "The Huo Long Heatmaker"
 				"ring of fire while aiming"	18
 				"damage bonus" 1.3
+				"killstreak tier" 2
+				"killstreak idleeffect" 3
 			}
 			CharacterAttributes
 			{
@@ -8733,6 +8877,12 @@ WaveSchedule
 			WeaponRestrictions MeleeOnly
 			Attributes MiniBoss
 			Tag bot_giant
+			ItemAttributes
+			{
+				ItemName "The Holy Mackerel"
+				"killstreak tier" 2
+				"killstreak idleeffect" 3
+			}
 			CharacterAttributes
 			{
 				"move speed bonus"	1.3  // 2 // actual speed is only 1.3 in-game due to speed limit
@@ -8768,6 +8918,8 @@ WaveSchedule
 				"damage penalty" 0.35		// 55% damage reduction
 				"weapon spread bonus" 0.4
 				"gesture speed increase" 0.43
+				"killstreak tier" 2
+				"killstreak idleeffect" 3
 			}
 			CharacterAttributes
 			{
@@ -8803,6 +8955,8 @@ WaveSchedule
 				"max health additive penalty" -0
 				"increased air control" 3.0
 				"cancel falling damage" 1
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
@@ -8834,6 +8988,8 @@ WaveSchedule
 			{
 				ItemName "The Eyelander"
 				"critboost on kill" 3
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			ItemAttributes
 			{
@@ -8868,6 +9024,8 @@ WaveSchedule
 				ItemName "The Sandman"
 				"effect bar recharge rate increased" 0.1
 				"max health additive penalty" -0
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -8896,6 +9054,8 @@ WaveSchedule
 				ItemName "The Sandman"
 				"effect bar recharge rate increased" 0.05
 				"max health additive penalty" -0
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
@@ -8920,6 +9080,12 @@ WaveSchedule
 			Attributes MiniBoss
 			Item "Upgradeable TF_WEAPON_BAT"
 			Tag bot_giant
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_BAT"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			ItemAttributes
 			{
 				ItemName "Bonk! Atomic Punch"
@@ -8953,6 +9119,8 @@ WaveSchedule
 				"faster reload rate" 0.2
 				"fire rate penalty" 2
 				"Projectile speed decreased" 0.5
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -8982,6 +9150,8 @@ WaveSchedule
 				ItemName "The detonator"
 				"fire rate bonus" 0.3
 				"mod no reload DISPLAY ONLY" 1
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -9011,6 +9181,8 @@ WaveSchedule
 				"fire rate bonus" 0.2
 				"damage causes airblast" 1
 				"mod no reload DISPLAY ONLY" 1
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
@@ -9044,6 +9216,8 @@ WaveSchedule
 				"flame size bonus" 1.75
 				"deflection size multiplier" 1.75
 				"airblast_pushback_no_viewpunch" 1
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -9073,6 +9247,8 @@ WaveSchedule
 				"fire rate bonus" 0.6
 				"damage bonus" 1.2
 				"gesture speed increase" 2.4
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -9105,6 +9281,8 @@ WaveSchedule
 				"clip size upgrade atomic" 7.0
 				"projectile spread angle penalty" 5
 				"Projectile speed increased"	1.1
+				"killstreak tier" 2
+				"killstreak idleeffect" 7
 			}
 
 			CharacterAttributes
@@ -9144,6 +9322,8 @@ WaveSchedule
 				"clip size upgrade atomic" 7.0
 				"projectile spread angle penalty" 2
 				"Projectile speed increased"	1.1
+				"killstreak tier" 2
+				"killstreak idleeffect" 7
 			}
 
 			CharacterAttributes
@@ -9175,6 +9355,8 @@ WaveSchedule
 				"reload time increased hidden" -0.1
 				"mod no reload DISPLAY ONLY" 1
 				"Projectile speed decreased" 0.65
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
@@ -9208,6 +9390,8 @@ WaveSchedule
 				"clip size upgrade atomic" 5.0
 				"Projectile speed decreased" 0.65
 				"gesture speed increase" 3
+				"killstreak tier" 2
+				"killstreak idleeffect" 6
 			}
 			CharacterAttributes
 			{
@@ -9364,9 +9548,17 @@ WaveSchedule
 			Tag bot_squad_member
 			ItemAttributes
 			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
 				ItemName "The Quick-Fix"
 				"ubercharge rate penalty" -0.1 // pretty much disables ubercharge
 				"heal rate bonus" 200
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -9427,6 +9619,8 @@ WaveSchedule
 				"fire rate bonus" 0.2
 				"clip size upgrade atomic" 5.0
 				"Projectile speed decreased" 0.9
+				"killstreak tier" 2
+				"killstreak idleeffect" 7
 			}
 			CharacterAttributes
 			{
@@ -9604,7 +9798,7 @@ WaveSchedule
 				"clip size upgrade atomic" 7.0
 				"Projectile speed increased" 1.3
 				"killstreak tier" 2
-				"killstreak idleeffect" 6
+				"killstreak idleeffect" 7
 			}
 			CharacterAttributes
 			{
@@ -9684,6 +9878,8 @@ WaveSchedule
 				"Blast radius increased" 1.2
 				"projectile spread angle penalty" 4
 				// "Projectile speed decreased" 0.35
+				"killstreak tier" 2
+				"killstreak idleeffect" 5
 			}
 			CharacterAttributes
 			{
@@ -9724,6 +9920,8 @@ WaveSchedule
 				// "Projectile speed increased" 0.75
 				"killstreak tier" 2
 				"killstreak idleeffect" 2
+				"killstreak tier" 2
+				"killstreak idleeffect" 4
 			}
 			CharacterAttributes
 			{
@@ -10032,14 +10230,8 @@ WaveSchedule
 			ItemAttributes
 			{
 				ItemName TF_WEAPON_MEDIGUN
-				"ubercharge rate penalty" -100
+				"ubercharge rate penalty" -3
 				"generate rage on heal" 2
-				"increase buff duration" 1.5
-			}
-			ItemAttributes
-			{
-				ItemName TF_WEAPON_SYRINGEGUN_MEDIC
-				"damage penalty" 0.1
 			}
 			CharacterAttributes
 			{
@@ -10089,7 +10281,7 @@ WaveSchedule
 			ItemAttributes
 			{
 				ItemName "The Quick-Fix"
-				"ubercharge rate penalty" -41
+				"ubercharge rate penalty" -3
 				"generate rage on heal" 2
 			}
 			CharacterAttributes
