@@ -2846,7 +2846,7 @@ WaveSchedule
 			Item	"the cow mangler 5000"
 			Item	"Lord Cockswain's Novelty Mutton Chops and Pipe"
 			Item	"Lord Cockswain's Pith Helmet"
-			ClassIcon        soldier_mangler
+			ClassIcon soldier_mangler
 			ItemAttributes
             {
                 ItemName        "the cow mangler 5000"
@@ -2874,11 +2874,6 @@ WaveSchedule
 					Item "MvM Gatebot Light Soldier"
 					Item "Lord Cockswain's Novelty Mutton Chops and Pipe"
 					Skill Hard
-					ItemAttributes
-					{
-						ItemName "Lord Cockswain's Pith Helmet"
-						"set item tint rgb" 15185211
-					}
 					ItemAttributes
 					{
 						ItemName "The Cow Mangler 5000"
