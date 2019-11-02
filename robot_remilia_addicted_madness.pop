@@ -10625,6 +10625,7 @@ WaveSchedule
 				"shot penetrate all players" 1
 				"killstreak tier" 2
 				"killstreak idleeffect" 2
+				"set_item_texture_wear" 0.2
 			}
 			CharacterAttributes
 			{
