@@ -10605,7 +10605,7 @@ WaveSchedule
 		T_TFBot_Scout_CTTR_Energy_Shotgun
 		{
 			Class Scout
-			ClassIcon scout_energy
+			ClassIcon scout_atomic
 			Scale 1.4
 			Health 650
 			Name "Energy Shotgun Scout"
