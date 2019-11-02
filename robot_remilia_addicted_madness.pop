@@ -116,7 +116,7 @@ WaveSchedule
 		{
 			Class Demoman
 			Name	"Super Pillager"
-			ClassIcon	Pillager
+			ClassIcon	pillager_giant
 			Attributes	MiniBoss
 			Health	4000
 			Skill	Expert
@@ -148,7 +148,7 @@ WaveSchedule
 		{
 			Class Demoman
 			Name	"Super Pillager"
-			ClassIcon	Pillager
+			ClassIcon	pillager_giant
 			Attributes	MiniBoss
 			Health	4000
 			Skill	Expert
@@ -250,7 +250,7 @@ WaveSchedule
 		{
 			Class Demoman
 			Name	"Super Pillager"
-			ClassIcon	Rocket_pillager
+			ClassIcon	rocket_pillager_giant
 			Attributes	MiniBoss
 			Health	4000
 			Skill	Expert
@@ -281,7 +281,7 @@ WaveSchedule
 		{
 			Class Demoman
 			Name	"Super Pillager"
-			ClassIcon	Pillager
+			ClassIcon	pillager_giant
 			Attributes	MiniBoss
 			Health	4000
 			Skill	Expert
@@ -311,7 +311,7 @@ WaveSchedule
 			Name	"Illusioner"
 			Class	Spy
 			WeaponRestrictions PrimaryOnly
-			ClassIcon	Illusioner
+			ClassIcon	illusioner_giant
 			Skill	Hard
 			Health	375		
 			Item	"The Enforcer"
@@ -328,7 +328,7 @@ WaveSchedule
 			Name	"Illusioner"
 			Class	Spy
 			WeaponRestrictions PrimaryOnly
-			ClassIcon	Illusioner
+			ClassIcon	illusioner_giant
 			Skill	Hard
 			Health	95	
 			Item	"The Enforcer"
@@ -384,7 +384,7 @@ WaveSchedule
 			Name	"Super Illusioner"
 			Class	Spy
 			WeaponRestrictions PrimaryOnly
-			ClassIcon	Illusioner
+			ClassIcon	illusioner_giant
 			Skill	Hard
 			Health	2500
 			Attributes	MiniBoss
@@ -410,7 +410,7 @@ WaveSchedule
 			Name	"Super Illusioner"
 			Class	Spy
 			WeaponRestrictions PrimaryOnly
-			ClassIcon	Illusioner
+			ClassIcon	illusioner_giant
 			Skill	Hard
 			Health	400	
 			Item	"The Enforcer"
@@ -489,7 +489,7 @@ WaveSchedule
 		{
 			Class	Demoman
 			Health	150
-			ClassIcon	Vex
+			ClassIcon	vex_giant
 			Scale	0.5
 			Skill	Hard
 			WeaponRestrictions	MeleeOnly
@@ -529,9 +529,10 @@ WaveSchedule
 			ClassIcon	villager_zombie
 			Skill	Hard
 			WeaponRestrictions	MeleeOnly
+			Item	"Upgradeable TF_WEAPON_FISTS"
 			ItemAttributes
 			{
-				ItemName	"TF_WEAPON_FISTS"
+				ItemName	"Upgradeable TF_WEAPON_FISTS"
 				"damage bonus"	1.25
 				"fire rate bonus"	0.8
 			}
@@ -547,7 +548,7 @@ WaveSchedule
 			Class Medic
 			Health	150
 			Name	"Kritzkrieg Witch"
-			ClassIcon	Witch
+			ClassIcon	witch_giant
 			Skill	Easy
 			Item	"The Kritzkrieg"
 			Attributes	AlwaysCrit
@@ -558,12 +559,7 @@ WaveSchedule
 				ItemName	"The Kritzkrieg"
 				"ubercharge rate bonus" 3
 				"bot medic uber health threshold" 400
-				"uber duration bonus" 200
-			}
-			ItemAttributes
-			{
-				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
+				"uber duration bonus" -200
 			}
 			CharacterAttributes
 			{
@@ -749,7 +745,7 @@ WaveSchedule
 		Ravager
 		{
 			Class	Heavy
-			ClassIcon	Ravager
+			ClassIcon	ravager_giant
 			Skill	Expert
 			Attributes	MiniBoss
 			WeaponRestrictions	MeleeOnly
@@ -1087,7 +1083,7 @@ WaveSchedule
 			{
 				"increase buff duration"	1001
 				"damage force reduction" 0.1
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"move speed bonus"	0.8
 			}
 		}
@@ -1119,6 +1115,8 @@ WaveSchedule
 						"faster reload rate" 0.01
 						"fire rate bonus" 0.7
 						"heal on hit for rapidfire"	50
+						"killstreak tier" 2
+						"killstreak idleeffect" 4
 					}
 					CharacterAttributes
 					{
@@ -1150,6 +1148,8 @@ WaveSchedule
 						"faster reload rate" 0.01
 						"fire rate bonus" 0.7
 						"heal on hit for rapidfire"	20
+						"killstreak tier" 2
+						"killstreak idleeffect" 4
 					}
 					CharacterAttributes
 					{
@@ -1295,7 +1295,7 @@ WaveSchedule
 			CharacterAttributes
 			{
 				"damage force reduction" 0.2
-				"airblast vulnerability multiplier" 0.2
+				"airblast vulnerability multiplier" 0.25
 				"override footstep sound set" 5
 				"move speed bonus" 0.9
 			}
@@ -1338,11 +1338,13 @@ WaveSchedule
 			{
 				ItemName	"Upgradeable tf_weapon_minigun"
 				"heal on kill" 600
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
 				"damage force reduction" 0.1
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 			}
 		}
 		T_TFGateBot_heavy_heal_on_kill_tanker
@@ -1370,11 +1372,13 @@ WaveSchedule
 					{
 						ItemName	"Upgradeable tf_weapon_minigun"
 						"heal on kill" 600
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					CharacterAttributes
 					{
 						"damage force reduction" 0.1
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 					}
 				}
 				RevertGateBotsBehavior
@@ -1392,11 +1396,13 @@ WaveSchedule
 					{
 						ItemName	"Upgradeable tf_weapon_minigun"
 						"heal on kill" 600
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					CharacterAttributes
 					{
 						"damage force reduction" 0.1
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 					}
 					Skill Hard
 				}
@@ -1685,14 +1691,9 @@ WaveSchedule
 				"bot medic uber health threshold" 400
 				"uber duration bonus" -200
 			}
-			ItemAttributes
-			{
-				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 			CharacterAttributes
 			{
-				"heal rate bonus" 0.1
+				"heal rate bonus" 3
 			}
 		}
 		T_TFBot_quick_krit
@@ -1712,14 +1713,9 @@ WaveSchedule
 				"bot medic uber health threshold" 400
 				"uber duration bonus" 4
 			}
-			ItemAttributes
-			{
-				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
-				"damage penalty" 0.1
-			}
 			CharacterAttributes
 			{
-				"heal rate bonus" 3
+				"heal rate bonus" 5
 			}
 		}
 		T_TFBot_Corvus
@@ -1761,7 +1757,7 @@ WaveSchedule
 				"move speed bonus"	0.4
 				"damage force reduction" 0.0
 				"rage giving scale"	0.4
-				"airblast vulnerability multiplier" 0.15 
+				"airblast vulnerability multiplier" 0.2 
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 2
 			}
@@ -2266,7 +2262,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 						"head scale" 0.7
@@ -2295,7 +2291,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 						"head scale" 0.7
@@ -2336,7 +2332,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 						"head scale" 0.7
@@ -2366,7 +2362,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 						"head scale" 0.7
@@ -2415,7 +2411,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 					}
@@ -2447,7 +2443,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 					}
@@ -2789,7 +2785,7 @@ WaveSchedule
 				//"fire rate bonus"	0.8
 				"mult_item_meter_charge_rate" 2
 				"killstreak tier" 2
-				"killstreak idleeffect" 1
+				"killstreak idleeffect" 4
 			}
 			CharacterAttributes
 			{
@@ -3135,11 +3131,11 @@ WaveSchedule
 			}
 			CharacterAttributes
 			{
-				"move speed penalty"	0.4
-				"heal rate bonus" 5
+				"move speed penalty"	0.5
+				"heal rate bonus" 50		// Allow killing the patient at the cost of higher dps required
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.05
-				"airblast vertical vulnerability multiplier" 0.05
+				"airblast vulnerability multiplier" 0.3
+				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 6
 			}
 		}
@@ -3366,12 +3362,12 @@ WaveSchedule
 				"gesture speed increase" 0.15
 				"fire rate bonus" 0.5
 				"killstreak tier" 2
-				"killstreak idleeffect" 6
+				"killstreak idleeffect" 4
 			}
 			CharacterAttributes
 			{
 				"damage force reduction" 0.2
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 			}
@@ -3397,13 +3393,13 @@ WaveSchedule
 				"gesture speed increase" 0.15
 				"fire rate bonus" 0.5
 				"killstreak tier" 2
-				"killstreak idleeffect" 6
+				"killstreak idleeffect" 4
 			}
 			CharacterAttributes
 			{
 				"move speed bonus"	1.1
 				"damage force reduction" 0.2
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 			}
@@ -3436,13 +3432,13 @@ WaveSchedule
 						"gesture speed increase" 0.15
 						"fire rate bonus" 0.5
 						"killstreak tier" 2
-						"killstreak idleeffect" 6
+						"killstreak idleeffect" 4
 					}
 					CharacterAttributes
 					{
 						"move speed bonus"	1.2
 						"damage force reduction" 0.7
-						"airblast vulnerability multiplier" 0.3
+						"airblast vulnerability multiplier" 0.35
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 5
 					}
@@ -3468,13 +3464,13 @@ WaveSchedule
 						"gesture speed increase" 0.15
 						"fire rate bonus" 0.5
 						"killstreak tier" 2
-						"killstreak idleeffect" 6
+						"killstreak idleeffect" 4
 					}
 					CharacterAttributes
 					{
 						"move speed bonus"	1.1
 						"damage force reduction" 0.7
-						"airblast vulnerability multiplier" 0.3
+						"airblast vulnerability multiplier" 0.35
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 5
 					}
@@ -3505,7 +3501,7 @@ WaveSchedule
 				"projectile spread angle penalty" 5
 				"Projectile speed decreased" 0.35
 				"killstreak tier" 2
-				"killstreak idleeffect" 1
+				"killstreak idleeffect" 5
 			}
 			CharacterAttributes
 			{
@@ -3578,11 +3574,13 @@ WaveSchedule
 						"Projectile speed increased"	1.1
 						"Blast radius increased" 1.5
 						"faster reload rate" 0.45
+						"killstreak tier" 2
+						"killstreak idleeffect" 2
 					}
 					CharacterAttributes
 					{
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.2
+						"airblast vulnerability multiplier" 0.25
 						"override footstep sound set" 3
 						"move speed bonus"	0.5
 					}
@@ -3610,11 +3608,13 @@ WaveSchedule
 						"Projectile speed increased"	1.1
 						"Blast radius increased" 1.5
 						"faster reload rate" 0.45
+						"killstreak tier" 2
+						"killstreak idleeffect" 2
 					}
 					CharacterAttributes
 					{
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.2
+						"airblast vulnerability multiplier" 0.25
 						"override footstep sound set" 3
 						"move speed bonus"	0.5
 					}
@@ -3642,11 +3642,13 @@ WaveSchedule
 				"Projectile speed increased"	1.1
 				"Blast radius increased" 1.5
 				"faster reload rate" 0.45
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.2
+				"airblast vulnerability multiplier" 0.25
 				"override footstep sound set" 3
 				"move speed bonus"	0.5
 			}
@@ -3680,6 +3682,8 @@ WaveSchedule
 				"projectile spread angle penalty" 4
 				// "Projectile speed increased" 0.45	//switch on for small maps
 				"heal on hit for rapidfire"	200
+				"killstreak tier" 2
+				"killstreak idleeffect" 4
 			}
 			ItemAttributes
 			{
@@ -3731,6 +3735,8 @@ WaveSchedule
 						"projectile spread angle penalty" 4
 						// "Projectile speed increased" 0.45	//switch on for small maps
 						"heal on hit for rapidfire"	200
+						"killstreak tier" 2
+						"killstreak idleeffect" 4
 					}
 					CharacterAttributes
 					{
@@ -3772,6 +3778,8 @@ WaveSchedule
 						"projectile spread angle penalty" 4
 						// "Projectile speed increased" 0.45	//switch on for small maps
 						"heal on hit for rapidfire"	200
+						"killstreak tier" 2
+						"killstreak idleeffect" 4
 					}
 					ItemAttributes
 					{
@@ -3816,6 +3824,8 @@ WaveSchedule
 						"faster reload rate" -0.1
 						"damage causes airblast" 1
 						"Blast radius increased" 1.35
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -3846,6 +3856,8 @@ WaveSchedule
 						"faster reload rate" -0.1
 						"damage causes airblast" 1
 						"Blast radius increased" 1.35
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -3879,6 +3891,8 @@ WaveSchedule
 				"faster reload rate" -0.1
 				"damage causes airblast" 1
 				"Blast radius increased" 1.35
+				"killstreak tier" 2
+				"killstreak idleeffect" 5
 			}
 			CharacterAttributes
 			{
@@ -3896,6 +3910,31 @@ WaveSchedule
 			Class Sniper
 			Skill Hard
 			MaxVisionRange 2500
+			ItemAttributes	// intentional
+			{
+				ItemName "Upgradeable TF_WEAPON_SNIPERRIFLE"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes	// intentional
+			{
+				ItemName "TF_WEAPON_SNIPERRIFLE"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			
+			ItemAttributes	// intentional
+			{
+				ItemName "Upgradeable TF_WEAPON_CLUB"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes	// intentional
+			{
+				ItemName "TF_WEAPON_CLUB"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 
 		T_TFBot_Sniper_Razorback
@@ -3905,6 +3944,31 @@ WaveSchedule
 			Skill Hard
 			Item "The Razorback"
 			MaxVisionRange 2500
+			ItemAttributes	// intentional
+			{
+				ItemName "Upgradeable TF_WEAPON_SNIPERRIFLE"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes	// intentional
+			{
+				ItemName "TF_WEAPON_SNIPERRIFLE"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			
+			ItemAttributes	// intentional
+			{
+				ItemName "Upgradeable TF_WEAPON_CLUB"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes	// intentional
+			{
+				ItemName "TF_WEAPON_CLUB"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 
 		T_TFBot_Sniper_Sydney_Sleeper
@@ -3915,6 +3979,31 @@ WaveSchedule
 			ClassIcon sniper_sydneysleeper
 			Item "The Sydney Sleeper"
 			MaxVisionRange 3000
+			ItemAttributes	// intentional
+			{
+				ItemName "The Sydney Sleeper"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes	// intentional
+			{
+				ItemName "The Sydney Sleeper"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			
+			ItemAttributes	// intentional
+			{
+				ItemName "Upgradeable TF_WEAPON_CLUB"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes	// intentional
+			{
+				ItemName "TF_WEAPON_CLUB"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 
 		// No Anim - NO NOT USE
@@ -3932,6 +4021,8 @@ WaveSchedule
 			{
 				ItemName "Jarate"
 				"effect bar recharge rate increased" 0.1
+				"killstreak tier" 2
+				"killstreak idleeffect" 7
 			}
 		}
 
@@ -3964,6 +4055,8 @@ WaveSchedule
 			{
 				ItemName "The Huntsman"
 				"fire rate bonus" 0.6
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			CharacterAttributes
 			{
@@ -4044,7 +4137,7 @@ WaveSchedule
 			Name "Hyper League Scout"
 			Skill Hard
 			Health 110
-			ClassIcon scout_stun_spammer
+			ClassIcon scout_stun
 			WeaponRestrictions MeleeOnly
 			Item "The Sandman"
 			Item "Batter's Helmet"
@@ -4167,6 +4260,24 @@ WaveSchedule
 		{
 			Class Spy
 			Skill Expert
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_REVOLVER"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_BUILDER_SPY"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_KNIFE"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 
 		// Medic
@@ -4178,6 +4289,12 @@ WaveSchedule
 			Skill Normal
 			Attributes SpawnWithFullCharge
 			Tag bot_squad_member
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			Item "Upgradeable TF_WEAPON_MEDIGUN" // no way to see it
 			ItemAttributes
 			{
@@ -4199,6 +4316,12 @@ WaveSchedule
 			Item "Upgradeable TF_WEAPON_MEDIGUN" // no way to see it
 			ItemAttributes
 			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
 				ItemName "Upgradeable TF_WEAPON_MEDIGUN"
 				"ubercharge rate bonus" 5
 				"uber duration bonus" -3
@@ -4216,6 +4339,12 @@ WaveSchedule
 			Tag bot_squad_member
 			ItemAttributes
 			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
 				ItemName "The Quick-Fix"
 				"ubercharge rate penalty" -0.1
 				"heal rate bonus" 10
@@ -4229,6 +4358,12 @@ WaveSchedule
 			Skill Easy
 			Item "The Quick-Fix"
 			Tag bot_squad_member
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 
 		T_TFBot_Medic_SlowRecharge
@@ -4241,6 +4376,12 @@ WaveSchedule
 			Tag bot_squad_member
 			Item "Field Practice"
 			Item "Upgradeable TF_WEAPON_MEDIGUN"
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_MEDIGUN"
@@ -4259,6 +4400,12 @@ WaveSchedule
 			Item "The Byte'd Beak"
 			Attributes SpawnWithFullCharge
 			Tag bot_squad_member
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			ItemAttributes
 			{
 				ItemName "powerhouse_medigun_sparkoflife"
@@ -4286,6 +4433,12 @@ WaveSchedule
 			Tag bot_squad_member
 			ItemAttributes
 			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
 				ItemName "concealedkiller_medigun_maskedmender"
 				"ubercharge rate bonus" 25
 				"medigun blast resist passive" 0.99
@@ -4309,6 +4462,12 @@ WaveSchedule
 			Item "The Byte'd Beak"
 			Attributes SpawnWithFullCharge
 			Tag bot_squad_member
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			ItemAttributes
 			{
 				ItemName "pyroland_medigun_flowerpower"
@@ -4336,6 +4495,12 @@ WaveSchedule
 			Item "Titanium Tyrolean"
 			Attributes SpawnWithFullCharge
 			Tag bot_squad_member
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			ItemAttributes
 			{
 				ItemName "powerhouse_medigun_sparkoflife"
@@ -4366,6 +4531,12 @@ WaveSchedule
 			Tag bot_squad_member
 			ItemAttributes
 			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
 				ItemName "concealedkiller_medigun_maskedmender"
 				"ubercharge rate bonus" 25
 				"uber duration bonus" 50000  // doesn't do anything just display only
@@ -4392,6 +4563,12 @@ WaveSchedule
 			Item "Titanium Tyrolean"
 			Attributes SpawnWithFullCharge
 			Tag bot_squad_member
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SYRINGEGUN_MEDIC"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 			ItemAttributes
 			{
 				ItemName "pyroland_medigun_flowerpower"
@@ -4461,9 +4638,9 @@ WaveSchedule
 			WeaponRestrictions MeleeOnly
 			Health 60
 			Attributes AlwaysCrit
-			Item "The All-Father"
+			//Item "The All-Father"
 			Item "Point and Shoot"
-			//Item "The Holiday Punch"
+			Item "The Holiday Punch"
 			ItemAttributes
 			{
 				ItemName "The Holiday Punch"
@@ -4590,6 +4767,8 @@ WaveSchedule
 				"Attack not cancel charge" 1
 				"charge time increased" 2
 				"charge recharge rate increased" 7
+				"killstreak tier" 2
+				"killstreak idleeffect" 7
 			}
 			ItemAttributes
 			{
@@ -4597,6 +4776,8 @@ WaveSchedule
 				"damage bonus"	1.5
 				"increased air control" 3.0
 				"cancel falling damage" 1
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
 			}
 			Item "Demo Kabuto"
 			Scale "1.3"
@@ -4822,6 +5003,38 @@ WaveSchedule
 			TeleportWhere spawnbot
 			Health 275
 			Attributes TeleportToHint
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SHOTGUN_PRIMARY"
+				"killstreak tier" 3
+				"killstreak idleeffect" 1
+				"killstreak effect" 2003
+			}
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_SHOTGUN_PRIMARY"
+				"killstreak tier" 3
+				"killstreak idleeffect" 1
+				"killstreak effect" 2003
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_WRENCH"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_WRENCH"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_BUILDER"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 
 		//TELEPORT INTO MAP DO NOT BUILD TELEPORTER
@@ -4832,6 +5045,38 @@ WaveSchedule
 			Skill Expert
 			Health 275
 			Attributes TeleportToHint
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SHOTGUN_PRIMARY"
+				"killstreak tier" 3
+				"killstreak idleeffect" 1
+				"killstreak effect" 2003
+			}
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_SHOTGUN_PRIMARY"
+				"killstreak tier" 3
+				"killstreak idleeffect" 1
+				"killstreak effect" 2003
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_WRENCH"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_WRENCH"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_BUILDER"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 
 		//NOT TELEPORT INTO MAP ENGY
@@ -4842,6 +5087,38 @@ WaveSchedule
 			Skill Expert
 			TeleportWhere spawnbot
 			Health 275
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SHOTGUN_PRIMARY"
+				"killstreak tier" 3
+				"killstreak idleeffect" 1
+				"killstreak effect" 2003
+			}
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_SHOTGUN_PRIMARY"
+				"killstreak tier" 3
+				"killstreak idleeffect" 1
+				"killstreak effect" 2003
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_WRENCH"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_WRENCH"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_BUILDER"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 
 		//NOT TELEPORT INTO MAP ENGY AND DOES NOT BUILD A TELEPORTER
@@ -4851,6 +5128,38 @@ WaveSchedule
 			Name Engineer
 			Skill Expert
 			Health 275
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SHOTGUN_PRIMARY"
+				"killstreak tier" 3
+				"killstreak idleeffect" 1
+				"killstreak effect" 2003
+			}
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_SHOTGUN_PRIMARY"
+				"killstreak tier" 3
+				"killstreak idleeffect" 1
+				"killstreak effect" 2003
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_WRENCH"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_WRENCH"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_BUILDER"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
 		}
 		//GateBots - Edited Valve Bots
 		T_TFGateBot_Scout_Melee
@@ -5086,6 +5395,8 @@ WaveSchedule
 					{
 						ItemName "The Huntsman"
 						"fire rate bonus" 0.6
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					CharacterAttributes
 					{
@@ -5111,6 +5422,8 @@ WaveSchedule
 					{
 						ItemName "The Huntsman"
 						"fire rate bonus" 0.6
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					CharacterAttributes
 					{
@@ -5924,11 +6237,11 @@ WaveSchedule
 					ItemAttributes
 					{
 						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
-						"reload time increased" 1.75
+						"reload time increased" 1.211
 						"fire rate bonus" 0.05
-						"clip size penalty" 0.5
+						"damage penalty" 0.5
 						"projectile spread angle penalty" 3
-					//	"Projectile speed increased"	1.1
+						//"Projectile speed increased"	1.1
 					}
 
 				}
@@ -5947,11 +6260,11 @@ WaveSchedule
 					ItemAttributes
 					{
 						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
-						"reload time increased" 1.75
+						"reload time increased" 1.211
 						"fire rate bonus" 0.05
-						"clip size penalty" 0.5
+						"damage penalty" 0.5
 						"projectile spread angle penalty" 3
-					//	"Projectile speed increased"	1.1
+						//"Projectile speed increased"	1.1
 					}
 				}
 			}
@@ -5985,11 +6298,11 @@ WaveSchedule
 					ItemAttributes
 					{
 						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
-						"reload time increased" 1.75
+						"reload time increased" 1.211
 						"fire rate bonus" 0.05
-						"clip size penalty" 0.5
+						"damage penalty" 0.5
 						"projectile spread angle penalty" 3
-					//	"Projectile speed increased"	1.1
+						//"Projectile speed increased"	1.1
 					}
 
 				}
@@ -6009,11 +6322,11 @@ WaveSchedule
 					ItemAttributes
 					{
 						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
-						"reload time increased" 1.75
+						"reload time increased" 1.211
 						"fire rate bonus" 0.05
-						"clip size penalty" 0.5
+						"damage penalty" 0.5
 						"projectile spread angle penalty" 3
-					//	"Projectile speed increased"	1.1
+						//"Projectile speed increased"	1.1
 					}
 				}
 			}
@@ -6433,6 +6746,8 @@ WaveSchedule
 						"projectile spread angle penalty" 5
 						"damage bonus" 1.5
 						"Projectile speed decreased" 0.4
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -6470,6 +6785,8 @@ WaveSchedule
 						"projectile spread angle penalty" 5
 						"damage bonus" 1.5
 						"Projectile speed decreased" 0.4
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -6522,6 +6839,8 @@ WaveSchedule
 						"projectile spread angle penalty" 5
 						"damage bonus" 1.5
 						"Projectile speed decreased" 0.4
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -6559,6 +6878,8 @@ WaveSchedule
 						"projectile spread angle penalty" 5
 						"damage bonus" 1.5
 						"Projectile speed decreased" 0.4
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
@@ -6611,6 +6932,8 @@ WaveSchedule
 						"projectile spread angle penalty" 5
 						"damage bonus" 1.5
 						"Projectile speed decreased" 0.4
+						"killstreak tier" 2
+						"killstreak idleeffect" 2
 					}
 					CharacterAttributes
 					{
@@ -6647,6 +6970,8 @@ WaveSchedule
 						"projectile spread angle penalty" 5
 						"damage bonus" 1.5
 						"Projectile speed decreased" 0.4
+						"killstreak tier" 2
+						"killstreak idleeffect" 2
 					}
 					CharacterAttributes
 					{
@@ -6702,7 +7027,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 					}
@@ -6733,7 +7058,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 					}
@@ -6773,7 +7098,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 						"head scale" 0.7		// make it not look dumb with the heavy gatebot hat
@@ -6805,7 +7130,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 						"head scale" 0.7		// make it not look dumb with the heavy gatebot hat
@@ -6857,7 +7182,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.7
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						// "attack projectiles" 1	// force ability to shoot down projectiles
 						"override footstep sound set" 2
@@ -6900,7 +7225,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.7
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						// "attack projectiles" 1	// force ability to shoot down projectiles
 						"override footstep sound set" 2
@@ -6955,7 +7280,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.7
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						// "attack projectiles" 1	// force ability to shoot down projectiles
 													// tested and doesn't work lol
@@ -7000,7 +7325,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.7
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						// "attack projectiles" 1	// force ability to shoot down projectiles (doesn't work lol)
 						"override footstep sound set" 2
@@ -7054,7 +7379,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.4
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 					}
@@ -7087,7 +7412,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.4
 						"damage force reduction" 0.3
-						"airblast vulnerability multiplier" 0.1
+						"airblast vulnerability multiplier" 0.15
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 2
 					}
@@ -7207,6 +7532,12 @@ WaveSchedule
 					Item "The Concheror"
 					ItemAttributes
 					{
+						ItemName "TF_WEAPON_ROCKETLAUNCHER"
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
+					}
+					ItemAttributes
+					{
 						ItemName "The Concheror"
 						"deploy time increased" 1.34
 					}
@@ -7214,7 +7545,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 						"increase buff duration"	1001
@@ -7222,11 +7553,6 @@ WaveSchedule
 				}
 				RevertGateBotsBehavior
 				{
-					ItemAttributes
-					{
-						ItemName "The Concheror"
-						"deploy time increased" 1.34
-					}
 					Item "MvM GateBot Light Soldier"
 					ItemAttributes               // turn off light hat
 					{
@@ -7240,11 +7566,22 @@ WaveSchedule
 					Attributes MiniBoss
 					Attributes SpawnWithFullCharge
 					Item "The Concheror"
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_ROCKETLAUNCHER"
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
+					}
+					ItemAttributes
+					{
+						ItemName "The Concheror"
+						"deploy time increased" 1.34
+					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 						"increase buff duration"	1001
@@ -7279,6 +7616,12 @@ WaveSchedule
 					Item "The Concheror"
 					ItemAttributes
 					{
+						ItemName "TF_WEAPON_ROCKETLAUNCHER"
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
+					}
+					ItemAttributes
+					{
 						ItemName "The Concheror"
 						"deploy time increased" 1.34
 					}
@@ -7286,7 +7629,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 						"increase buff duration"	1001
@@ -7299,6 +7642,12 @@ WaveSchedule
 					{
 						ItemName "MvM GateBot Light Soldier"
 						"item style override" 1
+					}
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_ROCKETLAUNCHER"
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					ItemAttributes
 					{
@@ -7317,7 +7666,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 						"increase buff duration"	1001
@@ -7364,13 +7713,15 @@ WaveSchedule
 						"Blast radius increased" 1.2
 						"projectile spread angle penalty" 4
 						// "Projectile speed increased" 0.75
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"override footstep sound set" 3
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 					}
 				}
@@ -7399,13 +7750,15 @@ WaveSchedule
 						"Blast radius increased" 1.2
 						"projectile spread angle penalty" 4
 						// "Projectile speed increased" 0.75
+						"killstreak tier" 2
+						"killstreak idleeffect" 5
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"override footstep sound set" 3
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 					}
 				}
@@ -7447,12 +7800,14 @@ WaveSchedule
 						"fire rate bonus" 0.2
 						"clip size upgrade atomic" 5.0
 						"Projectile speed decreased" 0.9
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 
@@ -7480,12 +7835,14 @@ WaveSchedule
 						"fire rate bonus" 0.2
 						"clip size upgrade atomic" 5.0
 						"Projectile speed decreased" 0.9
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -7529,12 +7886,14 @@ WaveSchedule
 						"fire rate bonus" 0.2
 						"clip size upgrade atomic" 5.0
 						"Projectile speed decreased" 0.9
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -7562,12 +7921,14 @@ WaveSchedule
 						"fire rate bonus" 0.2
 						"clip size upgrade atomic" 5.0
 						"Projectile speed decreased" 0.9
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -7609,13 +7970,13 @@ WaveSchedule
 						"heal on hit for rapidfire" 1000
 						"Projectile speed decreased" 0.9
 						"killstreak tier" 2
-						"killstreak idleeffect" 7
+						"killstreak idleeffect" 4
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -7646,13 +8007,13 @@ WaveSchedule
 						"heal on hit for rapidfire" 1000
 						"Projectile speed decreased" 0.9
 						"killstreak tier" 2
-						"killstreak idleeffect" 7
+						"killstreak idleeffect" 4
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -7695,12 +8056,14 @@ WaveSchedule
 						"clip size upgrade atomic" 7.0
 						"projectile spread angle penalty" 5
 						"Projectile speed increased"	1.1
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.2
+						"airblast vulnerability multiplier" 0.25
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 4
 						"head scale" 0.88
@@ -7728,13 +8091,15 @@ WaveSchedule
 						"clip size upgrade atomic" 7.0
 						"projectile spread angle penalty" 5
 						"Projectile speed increased"	1.1
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.2
+						"airblast vulnerability multiplier" 0.25
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 4
 						"head scale" 0.88
@@ -7779,12 +8144,14 @@ WaveSchedule
 						"clip size upgrade atomic" 7.0
 						"projectile spread angle penalty" 5
 						"Projectile speed increased"	1.1
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.2
+						"airblast vulnerability multiplier" 0.25
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 4
 						"head scale" 0.88
@@ -7813,12 +8180,14 @@ WaveSchedule
 						"clip size upgrade atomic" 7.0
 						"projectile spread angle penalty" 5
 						"Projectile speed increased"	1.1
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.2
+						"airblast vulnerability multiplier" 0.25
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 4
 						"head scale" 0.88
@@ -7843,7 +8212,7 @@ WaveSchedule
 					Tag bot_gatebot 				// having these will cause bots to run towards gates
 
 					// Item "The Fed-Fightin' Fedora"
-					Item "The Bolt Boy"
+					// Item "The Bolt Boy"
 					Item "The Force-a-Nature"
 					Item "MvM GateBot Light Scout"
 					Tag bot_giant
@@ -7857,17 +8226,19 @@ WaveSchedule
 						//"clip size bonus" 2
 						"bullets per shot bonus" 2
 						"fire rate bonus" 0.5
-						"faster reload rate" 1.7 // 70% slower reload
+						"reload time increased" 1.7 // 70% slower reload
 						"scattergun knockback mult" 6
 						"damage penalty" 0.35		// 55% damage reduction
 						"weapon spread bonus" 0.4
 						"gesture speed increase" 0.43
+						"killstreak tier" 2
+						"killstreak idleeffect" 3
 					}
 					CharacterAttributes
 					{
 						"move speed bonus"	1.1
 						"damage force reduction" 0.7
-						"airblast vulnerability multiplier" 0.3
+						"airblast vulnerability multiplier" 0.35
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 5
 					}
@@ -7875,7 +8246,7 @@ WaveSchedule
 				RevertGateBotsBehavior
 				{
 					// Item "The Fed-Fightin' Fedora"
-					Item "The Bolt Boy"
+					// Item "The Bolt Boy"
 					Item "The Force-a-Nature"
 					Item "MvM GateBot Light Scout"
 					ItemAttributes               // turn off light hat
@@ -7894,17 +8265,19 @@ WaveSchedule
 						//"clip size bonus" 2
 						"bullets per shot bonus" 2
 						"fire rate bonus" 0.5
-						"faster reload rate" 1.7 // 70% slower reload
+						"reload time increased" 1.7 // 70% slower reload
 						"scattergun knockback mult" 6
 						"damage penalty" 0.35		// 55% damage reduction
 						"weapon spread bonus" 0.4
 						"gesture speed increase" 0.43
+						"killstreak tier" 2
+						"killstreak idleeffect" 3
 					}
 					CharacterAttributes
 					{
 						"move speed bonus"	1.1
 						"damage force reduction" 0.7
-						"airblast vulnerability multiplier" 0.3
+						"airblast vulnerability multiplier" 0.35
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 5
 					}
@@ -7933,11 +8306,17 @@ WaveSchedule
 					WeaponRestrictions PrimaryOnly
 					Attributes HoldFireUntilFullReload
 					Attributes MiniBoss
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_ROCKETLAUNCHER"
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
+					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -7955,11 +8334,17 @@ WaveSchedule
 					WeaponRestrictions PrimaryOnly
 					Attributes HoldFireUntilFullReload
 					Attributes MiniBoss
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_ROCKETLAUNCHER"
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
+					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -8000,12 +8385,14 @@ WaveSchedule
 						"mod no reload DISPLAY ONLY" 1
 						"fire rate bonus" 0.5
 						"Projectile speed decreased" 0.65
+						"killstreak tier" 2
+						"killstreak idleeffect" 2
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -8030,12 +8417,14 @@ WaveSchedule
 						"mod no reload DISPLAY ONLY" 1
 						"fire rate bonus" 0.5
 						"Projectile speed decreased" 0.65
+						"killstreak tier" 2
+						"killstreak idleeffect" 2
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -8077,12 +8466,14 @@ WaveSchedule
 						"mod no reload DISPLAY ONLY" 1
 						"fire rate bonus" 0.5
 						"Projectile speed decreased" 0.65
+						"killstreak tier" 2
+						"killstreak idleeffect" 2
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -8108,12 +8499,14 @@ WaveSchedule
 						"mod no reload DISPLAY ONLY" 1
 						"fire rate bonus" 0.5
 						"Projectile speed decreased" 0.65
+						"killstreak tier" 2
+						"killstreak idleeffect" 2
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -8155,12 +8548,14 @@ WaveSchedule
 						"fire rate bonus" 0.1
 						"clip size upgrade atomic" 5.0
 						"Projectile speed decreased" 0.65
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -8186,12 +8581,14 @@ WaveSchedule
 						"fire rate bonus" 0.1
 						"clip size upgrade atomic" 5.0
 						"Projectile speed decreased" 0.65
+						"killstreak tier" 2
+						"killstreak idleeffect" 6
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.4
-						"airblast vulnerability multiplier" 0.15
+						"airblast vulnerability multiplier" 0.2
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 3
 					}
@@ -8231,12 +8628,14 @@ WaveSchedule
 						"flame size bonus" 1.75
 						"deflection size multiplier" 1.75
 						"airblast_pushback_no_viewpunch" 1
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.6
-						"airblast vulnerability multiplier" 0.25
+						"airblast vulnerability multiplier" 0.3
 						"airblast vertical vulnerability multiplier" 0.5
 					//	"head scale" 0.75
 						"head scale" 0.93	// to accomdate the larger head size I gave to regular Giant Pyros
@@ -8256,6 +8655,8 @@ WaveSchedule
 						"flame size bonus" 1.75
 						"deflection size multiplier" 1.75
 						"airblast_pushback_no_viewpunch" 1
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					Item "MvM GateBot Light Pyro"
 					ItemAttributes               // turn off light hat
@@ -8272,7 +8673,7 @@ WaveSchedule
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.6
-						"airblast vulnerability multiplier" 0.25
+						"airblast vulnerability multiplier" 0.3
 						"airblast vertical vulnerability multiplier" 0.5
 					//	"head scale" 0.75
 						"head scale" 0.93	// to accomdate the larger head size I gave to regular Giant Pyros
@@ -8315,12 +8716,14 @@ WaveSchedule
 						"flame size bonus" 1.75
 						"deflection size multiplier" 1.75
 						"airblast_pushback_no_viewpunch" 1
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.6
-						"airblast vulnerability multiplier" 0.25
+						"airblast vulnerability multiplier" 0.3
 						"airblast vertical vulnerability multiplier" 0.5
 					//	"head scale" 0.75
 						"head scale" 0.93	// to accomdate the larger head size I gave to regular Giant Pyros
@@ -8352,12 +8755,14 @@ WaveSchedule
 						"flame size bonus" 1.75
 						"deflection size multiplier" 1.75
 						"airblast_pushback_no_viewpunch" 1
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					CharacterAttributes
 					{
 						"move speed penalty"	0.5
 						"damage force reduction" 0.6
-						"airblast vulnerability multiplier" 0.25
+						"airblast vulnerability multiplier" 0.3
 						"airblast vertical vulnerability multiplier" 0.5
 					//	"head scale" 0.75
 						"head scale" 0.93	// to accomdate the larger head size I gave to regular Giant Pyros
@@ -8395,7 +8800,7 @@ WaveSchedule
 			CharacterAttributes
 			{
 				"damage force reduction" 0.7
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 			}
@@ -8426,7 +8831,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.15
+				"airblast vulnerability multiplier" 0.2
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.7
 				"override footstep sound set" 3
@@ -8461,7 +8866,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.25
+				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.2
 				"override footstep sound set" 6
@@ -8494,7 +8899,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.5
-				"airblast vulnerability multiplier" 0.2
+				"airblast vulnerability multiplier" 0.25
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 4
 			}
@@ -8524,7 +8929,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.5
-				"airblast vulnerability multiplier" 0.2
+				"airblast vulnerability multiplier" 0.25
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 4
 			}
@@ -8553,7 +8958,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 2
 			}
@@ -8588,7 +8993,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.25
+				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
 			}
 		}
@@ -8620,7 +9025,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 2
 			}
@@ -8647,7 +9052,7 @@ WaveSchedule
 				"damage penalty" 0.5
 				"faster reload rate" 0.1
 				"killstreak tier" 2
-				"killstreak idleeffect" 7
+				"killstreak idleeffect" 6
 			}
 			ItemAttributes
 			{
@@ -8657,13 +9062,13 @@ WaveSchedule
 				"damage penalty" 0.5
 				"faster reload rate" 0.1
 				"killstreak tier" 2
-				"killstreak idleeffect" 7
+				"killstreak idleeffect" 6
 			}
 			CharacterAttributes
 			{
 				"move speed penalty"	0.7
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				// "attack projectiles" 1	// force ability to shoot down projectiles
 				// tested and doesn't work lol
@@ -8695,7 +9100,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"gesture speed increase" 0.4
 				"override footstep sound set" 2
@@ -8724,7 +9129,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"gesture speed increase" 0.8
 				"override footstep sound set" 2
@@ -8759,7 +9164,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.35
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 2
 			}
@@ -8825,7 +9230,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 2
 			}
@@ -8854,7 +9259,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 2
 			}
@@ -8882,7 +9287,7 @@ WaveSchedule
 			{
 				"move speed bonus"	1.3  // 2 // actual speed is only 1.3 in-game due to speed limit
 				"damage force reduction" 0.7
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 			}
@@ -8893,8 +9298,8 @@ WaveSchedule
 			Class Scout
 			Name "Force-a-Nature Super Scout"
 			ClassIcon scout_fan_giant
-			Item "The Bolt Boy"
 			Item "The Fed-Fightin' Fedora"
+			Item "The Bolt Boy"
 			Item "The Force-a-Nature"
 			Health 1200
 			Attributes MiniBoss
@@ -8920,7 +9325,7 @@ WaveSchedule
 			{
 				"move speed bonus"	1.1  // removing this is debatable for my inner self
 				"damage force reduction" 0.7
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 			}
@@ -8958,7 +9363,7 @@ WaveSchedule
 				"increased jump height" 2
 				//"move speed bonus"	1.5
 				"damage force reduction" 0.7
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 				"head scale" 1.5
@@ -8995,7 +9400,7 @@ WaveSchedule
 			{
 				"move speed penalty" 0.5
 				"damage force reduction" 0.5
-				"airblast vulnerability multiplier" 0.2
+				"airblast vulnerability multiplier" 0.25
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 4
 			}
@@ -9005,7 +9410,7 @@ WaveSchedule
 		{
 			Class Scout
 			Name "Major League Scout"
-			ClassIcon scout_stun_spammer
+			ClassIcon scout_stun_giant
 			Skill Expert
 			Health 1600
 			Item "Batter's Helmet"
@@ -9025,7 +9430,7 @@ WaveSchedule
 			CharacterAttributes
 			{
 				"damage force reduction" 0.7
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 			}
@@ -9055,7 +9460,7 @@ WaveSchedule
 			CharacterAttributes
 			{
 				"damage force reduction" 0.7
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 				"move speed penalty" 0.75
@@ -9090,7 +9495,7 @@ WaveSchedule
 			CharacterAttributes
 			{
 				"damage force reduction" 0.7
-				"airblast vulnerability multiplier" 0.3
+				"airblast vulnerability multiplier" 0.35
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 5
 			}
@@ -9121,7 +9526,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.15
+				"airblast vulnerability multiplier" 0.2
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.7
 				"override footstep sound set" 3
@@ -9152,7 +9557,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.25
+				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 6
 			}
@@ -9183,7 +9588,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.35
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.25
+				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 6
 			}
@@ -9218,7 +9623,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.25
+				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 6
 			}
@@ -9249,7 +9654,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.3
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 2
 			}
@@ -9277,14 +9682,14 @@ WaveSchedule
 				"projectile spread angle penalty" 5
 				"Projectile speed increased"	1.1
 				"killstreak tier" 2
-				"killstreak idleeffect" 7
+				"killstreak idleeffect" 6
 			}
 
 			CharacterAttributes
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.2
+				"airblast vulnerability multiplier" 0.25
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 4
 			}
@@ -9318,14 +9723,14 @@ WaveSchedule
 				"projectile spread angle penalty" 2
 				"Projectile speed increased"	1.1
 				"killstreak tier" 2
-				"killstreak idleeffect" 7
+				"killstreak idleeffect" 6
 			}
 
 			CharacterAttributes
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 4
 			}
@@ -9357,7 +9762,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.15
+				"airblast vulnerability multiplier" 0.2
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.7
 				"override footstep sound set" 3
@@ -9392,7 +9797,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.15
+				"airblast vulnerability multiplier" 0.2
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.7
 				"override footstep sound set" 3
@@ -9421,7 +9826,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.15
+				"airblast vulnerability multiplier" 0.2
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.7
 				"override footstep sound set" 3
@@ -9444,6 +9849,12 @@ WaveSchedule
 			Item "The Concheror"
 			ItemAttributes
 			{
+				ItemName "TF_WEAPON_ROCKETLAUNCHER"
+				"killstreak tier" 2
+				"killstreak idleeffect" 1
+			}
+			ItemAttributes
+			{
 				ItemName  "The Concheror"
 				"deploy time increased" 1.34
 			}
@@ -9451,7 +9862,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.15
+				"airblast vulnerability multiplier" 0.2
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.7
 				"override footstep sound set" 3
@@ -9482,7 +9893,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.15
+				"airblast vulnerability multiplier" 0.2
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.7
 				"override footstep sound set" 3
@@ -9515,13 +9926,13 @@ WaveSchedule
 				"heal on hit for rapidfire" 1000
 				"Projectile speed decreased" 0.9
 				"killstreak tier" 2
-				"killstreak idleeffect" 7
+				"killstreak idleeffect" 4
 			}
 			CharacterAttributes
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.15
+				"airblast vulnerability multiplier" 0.2
 				"airblast vertical vulnerability multiplier" 0.5
 				"head scale" 1.7
 				"override footstep sound set" 3
@@ -9559,7 +9970,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.25
+				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
 				"health regen"	40
 			}
@@ -9584,7 +9995,7 @@ WaveSchedule
 			{
 				"move speed bonus" 2
 				"damage force reduction" 0.5
-				"airblast vulnerability multiplier" 0.2
+				"airblast vulnerability multiplier" 0.25
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 7
 				"cannot be backstabbed" 1
@@ -9614,14 +10025,16 @@ WaveSchedule
 				"fire rate bonus" 0.2
 				"clip size upgrade atomic" 5.0
 				"Projectile speed decreased" 0.9
+				"gesture speed increase" 3
 				"killstreak tier" 2
-				"killstreak idleeffect" 7
+				"killstreak idleeffect" 6
 			}
 			CharacterAttributes
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.4
-				"airblast vulnerability multiplier" 0.4
+				"airblast vulnerability multiplier" 0.2
+				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 3
 			}
 		}
@@ -9649,6 +10062,8 @@ WaveSchedule
 				"projectile spread angle penalty" 5
 				"damage bonus" 1.5
 				"Projectile speed decreased" 0.4
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
@@ -9793,7 +10208,7 @@ WaveSchedule
 				"clip size upgrade atomic" 7.0
 				"Projectile speed increased" 1.3
 				"killstreak tier" 2
-				"killstreak idleeffect" 7
+				"killstreak idleeffect" 6
 			}
 			CharacterAttributes
 			{
@@ -9881,7 +10296,7 @@ WaveSchedule
 				"move speed penalty"	0.5
 				"override footstep sound set" 3
 				"damage force reduction" 0.0
-				"airblast vulnerability multiplier" 0.1
+				"airblast vulnerability multiplier" 0.15
 				"airblast vertical vulnerability multiplier" 0.1
 				"head scale" 1.7
 				"gesture speed increase" 4
@@ -10125,7 +10540,33 @@ WaveSchedule
 			}
 		}
 //====================== Custom bot templates concepts by mc, may not be made by mc only =======================================
-		T_TFBot_Scout_Testing_Dummy
+		T_TFBot_Dummy
+		{
+			Class Scout
+			Skill Expert
+			Item "Mad Milk"
+			WeaponRestrictions SecondaryOnly
+			Attributes AlwaysFireWeapon
+			ItemAttributes
+			{
+				ItemName "Mad Milk"
+				"gesture speed increase" 0
+			}
+		}
+		T_TFBot_Scout_Dummy		// same as above
+		{
+			Class Scout
+			Skill Expert
+			Item "Mad Milk"
+			WeaponRestrictions SecondaryOnly
+			Attributes AlwaysFireWeapon
+			ItemAttributes
+			{
+				ItemName "Mad Milk"
+				"gesture speed increase" 0
+			}
+		}
+		T_TFBot_Scout_Testing_Dummy		// same as above
 		{
 			Class Scout
 			Skill Expert
@@ -10175,12 +10616,15 @@ WaveSchedule
 			{
 				ItemName "pyroland_scattergun_shottohell"
 				"faster reload rate" -0.1
-				"damage bonus" 1.25
+				"damage bonus" 1.5
 				"bullets per shot bonus" 0.8
-				"fire rate penalty" 2
+				"fire rate penalty" 1.4
 				"spread penalty" 1.15
 				"sniper fires tracer" 1
-				"apply look velocity on damage" 50  // acts as extra damage force, letting players know that this bot can be powerful at close range
+				"ragdolls become ash" 1
+				"shot penetrate all players" 1
+				"killstreak tier" 2
+				"killstreak idleeffect" 2
 			}
 			CharacterAttributes
 			{
@@ -10215,6 +10659,7 @@ WaveSchedule
 			Name "Shield Medic"
 			ClassIcon medic_shield_qf
 			Skill Normal
+			WeaponRestrictions SecondaryOnly
 			Attributes SpawnWithFullCharge
 			Attributes ProjectileShield
 			Attributes IgnoreEnemies
@@ -10235,6 +10680,28 @@ WaveSchedule
 				"increase buff duration" 3
 			}
 		}
+		T_TFBot_Medic_Megaheal_Inf
+		{
+		    Class Medic
+			ClassIcon medic_infpop
+			Name "Infinite Mega-Heal Medic"
+			Tag bot_giant //Because Mega-Heal disable stuns, addcond 71 makes them able to be backstabbed at any angle
+		    Skill Normal	// Don't overheal anyone else, pocket your patient
+			WeaponRestrictions SecondaryOnly
+			Attributes SpawnWithFullCharge
+			Tag bot_squad_member
+			Item "The Quick-Fix"
+			Item "Titanium Tyrolean"
+			ItemAttributes
+			{
+			    ItemName "The Quick-Fix"
+			    "bot medic uber health threshold" 400
+				"ubercharge rate bonus" 200
+				"uber duration bonus" -508
+				"heal rate bonus" 1.2
+				"healing received bonus" 1.1
+			}	
+		}	
 		T_TFBot_Medic_QuickFix_Shield
 		{
 			Class Medic
@@ -10521,6 +10988,47 @@ WaveSchedule
 				"fire rate bonus" 0.1
 			}
 		}
+		T_TFBot_Giant_Soldier_RocketShotgun // Start as terrifying Rocket Shotgunner, then become a Rocket Barrager
+												// ToD is Ticket to Die, should be TTD but we called it ToD???
+												// (ToD still sounds cool, mentioning it is just for fun) This is used in our Trainyard adv mission ^^
+		{
+			Class Soldier
+			//  Name "Sergeant Rocket Shotgun"
+			Name "Giant Rocket Rain Soldier"
+			ClassIcon soldier_rocketrain_giant
+			Health 4000
+			Attributes MiniBoss
+			Attributes HoldFireUntilFullReload
+			Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item "The Rebel Rouser"
+			Item "Exquisite Rack"
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"faster reload rate" 0.15
+				"fire rate bonus" 0.025
+				"damage penalty" 0.5
+				"clip size upgrade atomic" 13
+				"projectile speed decreased" 0.4
+				"projectile spread angle penalty" 10
+				"fire rate bonus with reduced health" 0.05
+				"gesture speed increase" 1.5
+				"blast radius decreased" 0.85
+				"dmg falloff increased" 1.3
+				"rocket jump damage reduction" 0.05
+				"killstreak tier" 2
+				"killstreak idleeffect" 7
+			}
+			CharacterAttributes
+			{
+				"move speed penalty" 0.5
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.2
+				"rage giving scale"	0.4
+				"airblast vertical vulnerability multiplier" 0.5
+				"override footstep sound set" 3
+			}
+		}
 		T_TFBot_Giant_Pyro_Flare_Spammer_Real // Spams flare gun fire
 		{
 			Class Pyro
@@ -10544,7 +11052,7 @@ WaveSchedule
 			{
 				"move speed penalty"	0.5
 				"damage force reduction" 0.6
-				"airblast vulnerability multiplier" 0.25
+				"airblast vulnerability multiplier" 0.3
 				"airblast vertical vulnerability multiplier" 0.5
 				"override footstep sound set" 6
 			}
@@ -10553,18 +11061,19 @@ WaveSchedule
 		{
 			Class Soldier
 			//  Name "Sergeant Rocket Shotgun"
-			Name "Sergeant Rocket Storm"
-			ClassIcon soldier_blackbox
+			Name "Major Rocket Shotgun"
+			//  Name "Captain Rocket Flurry"  // reserved RJ variant... :) 
+			ClassIcon soldier_blackbox_giant
 			Health 50000
 			Attributes MiniBoss
 			Attributes UseBossHealthBar
 			Attributes HoldFireUntilFullReload
-			Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item "The Black Box"
 			Item "The Rebel Rouser"
 			Item "Exquisite Rack"
 			ItemAttributes
 			{
-				ItemName "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				ItemName "The Black Box"
 				"faster reload rate" 0.07
 				"fire rate bonus" 0.025
 				"damage penalty" 0.7
@@ -10580,6 +11089,8 @@ WaveSchedule
 				"heal on kill" 5000  // discourage pyros
 				"paintkit_proto_def_index" 217 // Bomber Soul
 				"set_item_texture_wear" 0.2 // required for potatoes, FN
+				"killstreak tier" 2
+				"killstreak idleeffect" 6
 			}
 			CharacterAttributes
 			{
@@ -10598,7 +11109,7 @@ WaveSchedule
 			Class Soldier
 			//  Name "Sergeant Rocket Shotgun"
 			Name "Sergeant Rocket Storm"
-			ClassIcon soldier_rocketshotgun_v2
+			ClassIcon soldier_rocketrain_giant
 			Health 14000
 			Attributes MiniBoss
 			Attributes UseBossHealthBar
@@ -10665,6 +11176,58 @@ WaveSchedule
 				"override footstep sound set" 2
 				"airblast vertical vulnerability multiplier" 0.0
 				"rage giving scale" 0.4
+			}
+		}
+		T_TFGateBot_Soldier_Extended_Buff_Normal
+		{
+			Class Soldier
+			Name "Extended Buff Soldier"
+			ClassIcon soldier_buff
+
+			EventChangeAttributes
+			{
+				Default
+				{
+					BehaviorModifiers push			// having these will cause bots to run towards gates
+					Attributes IgnoreFlag			// having these will cause bots to run towards gates
+					Tag nav_prefer_gate1_flank 		// having these will cause bots to run towards gates
+					Tag bot_gatebot 				// having these will cause bots to run towards gates
+
+					Item "The Buff Banner"
+					Item "MvM GateBot Light Soldier"
+					Skill Normal
+					Attributes SpawnWithFullCharge
+					ItemAttributes
+					{
+						ItemName "The Buff Banner"
+						"deploy time increased" 1.34
+					}
+					CharacterAttributes
+					{
+						"increase buff duration"	1001
+					}
+				}
+				RevertGateBotsBehavior
+				{
+					Item "The Buff Banner"
+					ItemAttributes
+					{
+						ItemName "The Buff Banner"
+						"deploy time increased" 1.34
+					}
+					Item "MvM GateBot Light Soldier"
+					ItemAttributes               // turn off light hat
+					{
+						ItemName "MvM GateBot Light Soldier"
+						"item style override" 1
+					}
+					Skill Normal
+					Attributes SpawnWithFullCharge
+					CharacterAttributes
+					{
+						"increase buff duration"	1001
+					}
+				}
 			}
 		}
 		T_TFGateBot_Soldier_Extended_Concheror_Hard
@@ -10857,6 +11420,66 @@ WaveSchedule
 				}
 			}
 		}
+		T_TFGateBot_Demo_Burst_Expert
+		{
+			Class Demoman
+			Name "Burst Fire Demoman"
+			ClassIcon demo_burst
+
+			EventChangeAttributes
+			{
+				Default
+				{
+					BehaviorModifiers Push			// having these will cause bots to run towards gates
+					Attributes IgnoreFlag			// having these will cause bots to run towards gates
+					Tag nav_prefer_gate1_flank 		// having these will cause bots to run towards gates
+					Tag bot_gatebot 				// having these will cause bots to run towards gates
+
+					Item "Tartan Tyrolean"
+					Item "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+					Skill Expert
+					WeaponRestrictions PrimaryOnly
+					Attributes HoldFireUntilFullReload
+					ItemAttributes
+					{
+						ItemName "Tartan Tyrolean"
+						"set item tint rgb" 15185211
+					}
+					ItemAttributes
+					{
+						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+						"reload time increased" 1.211
+						"fire rate bonus" 0.05
+						"damage penalty" 0.5
+						"projectile spread angle penalty" 3
+						//"Projectile speed increased"	1.1
+					}
+
+				}
+				RevertGateBotsBehavior
+				{
+					Item "Tartan Tyrolean"
+					Item "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+					Skill Expert
+					WeaponRestrictions PrimaryOnly
+					Attributes HoldFireUntilFullReload
+					ItemAttributes
+					{
+						ItemName "Tartan Tyrolean"
+						"set item tint rgb" 6773060
+					}
+					ItemAttributes
+					{
+						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+						"reload time increased" 1.211
+						"fire rate bonus" 0.05
+						"damage penalty" 0.5
+						"projectile spread angle penalty" 3
+						//"Projectile speed increased"	1.1
+					}
+				}
+			}
+		}
 		T_TFGateBot_Sniper_Huntsman_Hard
 		{
 			Class Sniper
@@ -11029,11 +11652,13 @@ WaveSchedule
 						ItemName "Upgradeable TF_WEAPON_SCATTERGUN"
 						"bullets per shot bonus" 1.2
 						"damage bonus" 1.25
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					CharacterAttributes
 					{
 						"damage force reduction" 0.7
-						"airblast vulnerability multiplier" 0.3
+						"airblast vulnerability multiplier" 0.35
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 5
 					}
@@ -11051,6 +11676,8 @@ WaveSchedule
 						ItemName "Upgradeable TF_WEAPON_SCATTERGUN"
 						"bullets per shot bonus" 1.2
 						"damage bonus" 1.25
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
 					}
 					ItemAttributes
 					{
@@ -11060,7 +11687,72 @@ WaveSchedule
 					CharacterAttributes
 					{
 						"damage force reduction" 0.7
-						"airblast vulnerability multiplier" 0.3
+						"airblast vulnerability multiplier" 0.35
+						"airblast vertical vulnerability multiplier" 0.5
+						"override footstep sound set" 5
+					}
+				}
+			}
+		}
+		T_TFGateBot_Giant_Demo_RapidFire  // same as Valve version
+		{
+			Class Demoman
+			Name "Giant Demoman"
+			ClassIcon demo_giant
+			Health 3300
+			EventChangeAttributes
+			{
+				Default
+				{
+					Skill Expert
+					Item "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+					Item "MvM Gatebot Light Demoman"
+					Attributes IgnoreFlag
+					Tag bot_giant
+					Tag bot_gatebot
+					Tag nav_prefer_gate1_flank
+					Attributes MiniBoss
+					BehaviorModifiers Push
+					ItemAttributes
+					{
+						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+						"fire rate bonus" 0.5
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
+					}
+					CharacterAttributes
+					{
+						"move speed penalty" 0.5
+						"damage force reduction" 0.5
+						"airblast vulnerability multiplier" 0.25
+						"airblast vertical vulnerability multiplier" 0.5
+						"override footstep sound set" 5
+					}
+				}
+				RevertGateBotsBehavior
+				{
+					Skill Expert
+					Item "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+					Item "MvM Gatebot Light Demoman"
+					Tag bot_giant
+					Attributes MiniBoss
+					ItemAttributes
+					{
+						ItemName "MvM Gatebot Light Demoman"
+						"item style override" 1
+					}
+					ItemAttributes
+					{
+						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+						"fire rate bonus" 0.5
+						"killstreak tier" 2
+						"killstreak idleeffect" 1
+					}
+					CharacterAttributes
+					{
+						"move speed penalty" 0.5
+						"damage force reduction" 0.5
+						"airblast vulnerability multiplier" 0.25
 						"airblast vertical vulnerability multiplier" 0.5
 						"override footstep sound set" 5
 					}
@@ -11110,6 +11802,63 @@ WaveSchedule
 			{
 				ClassIcon	sign_d
 			}
+		}
+//====================== Custom bot templates concepts stolen, like other templates, most templates here aren't used and may be in here for different reasons =======================================
+
+		T_TFBot_Sephan_Giant_Soldier_Frostbite
+		{
+			ClassIcon    soldier_frostbite
+			Health    4000
+			Name    "Giant Frostbite Soldier"
+			Skill    Expert
+			Template    T_TFBot_Giant_Soldier_Crit
+			ItemAttributes
+			{
+				ItemName    "the original"
+				"fire rate penalty"    1.25
+				"slow enemy on hit major"    2
+				"bleeding duration"    2
+			//	"attach particle effect" 87		// frosbite unu weapon effect
+				"attach particle effect" 703	// cool unu weapon effect
+			}
+			CharacterAttributes
+			{
+				"move speed penalty"    0.4
+				"damage force reduction"    0.4
+				"airblast vulnerability multiplier"    0.2
+				"airblast vertical vulnerability multiplier"    0.5
+			}
+			Item    "the brown bomber"
+		}
+		T_TFBot_Sephan_Giant_Soldier_Frostbite_Battalion
+		{
+			ClassIcon    soldier_frostbite_bats
+			Health    4000
+			Name    "Giant Frostbite Backup Soldier"
+			Template    T_TFBot_Giant_Soldier_Extended_Battalion
+			Attributes    "AlwaysCrit"
+			ItemAttributes
+			{
+				ItemName    "the original"
+				"fire rate bonus" 	0.6		//	0.5
+				"faster reload rate"    -0.8
+				"slow enemy on hit major"    2
+				"bleeding duration"    2
+				"damage penalty"    0.65
+				"Projectile speed decreased" 0.5
+			//	"attach particle effect" 87		// frosbite unu weapon effect
+				"attach particle effect" 703	// cool unu weapon effect
+			}
+			CharacterAttributes
+			{
+				"move speed penalty"    0.4
+				"damage force reduction"    0.4
+			//	"airblast vulnerability multiplier"    0.1
+				"airblast vulnerability multiplier"    0.2
+				"airblast vertical vulnerability multiplier"    0.5
+			}
+			Item    "the original"
+			Item    "the brown bomber"
 		}
 	}
 }
